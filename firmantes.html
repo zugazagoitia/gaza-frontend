@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Petición de Gaza</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridjs@1.2.0/dist/theme/mermaid.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gridjs/6.0.6/gridjs.production.min.js" integrity="sha512-wpiJjuL800CTEBA0QFs+RFw0tFtpXnQGea1p9S16WcYNXC1F3U0l1L7FQrDC3ihkYRtOj4Td7lKR3mYKxrwMMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    </head>
+    <body>
+        <section class="hero is-primary is-bold">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">
+                        Petición de Gaza
+                    </h1>
+                    <h2 class="subtitle">
+                        Firme la petición para apoyar a Gaza
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div id="table-container"></div>
+            </div>
+        </section>
+        <script>
+            new gridjs.Grid({
+                columns: ['Nombre', 'Apellidos', 'Afiliación'],
+                data: [
+                    ['John', 'Doe', 'ACME Inc.'],
+                    ['Jane', 'Doe', 'ACME Inc.'],
+                    ['Bob', 'Smith', 'ACME Inc.'],
+                    ['Alice', 'Johnson', 'ACME Inc.']
+                ]
+            }).render(document.getElementById("table-container"));
+        </script>
+    </body>
+</html>

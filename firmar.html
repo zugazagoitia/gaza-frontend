@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Petición de Gaza</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
+        />
+    </head>
+    <body>
+        <section class="hero is-primary is-bold">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">Declaración sobre la situación en Gaza</h1>
+                    <h2 class="subtitle">Firme la petición para apoyar a Gaza</h2>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <h1 class="title">Firma</h1>
+                <form id="firmar-form" method="POST">
+                <div class="field">
+                        <label class="label">Nombre</label>
+                        <div class="control">
+                                <input class="input" type="text" name="nombre" required />
+                        </div>
+                </div>
+                <div class="field">
+                        <label class="label">Primer apellido</label>
+                        <div class="control">
+                                <input class="input" type="text" name="apellido1" required />
+                        </div>
+                </div>
+                <div class="field">
+                        <label class="label">Segundo apellido</label>
+                        <div class="control">
+                                <input class="input" type="text" name="apellido2" />
+                        </div>
+                </div>
+                <div class="field">
+                        <label class="label">Afiliación</label>
+                        <div class="control">
+                                <input class="input" type="text" name="afiliacion" required />
+                        </div>
+                </div>
+                    <div class="field">
+                        <label class="label">DNI/NIE</label>
+                        <div class="control">
+                            <input class="input" type="text" name="dni" required />
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">E-mail</label>
+                        <div class="control">
+                            <input class="input" type="email" name="email" required />
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Ocupación</label>
+                        <div class="control">
+                            <div class="select">
+                                <select name="ocupacion" required>
+                                    <option value="" disabled selected>
+                                        Selecciona una opción
+                                    </option>
+                                    <option value="profesor">Profesor</option>
+                                    <option value="investigador">Investigador</option>
+                                    <option value="estudiante">Estudiante</option>
+                                    <option value="PAS">PAS</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <label class="checkbox">
+                                <input type="checkbox" name="aceptar-email" />
+                                Acepto recibir información sobre acciones posteriores.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <label class="checkbox">
+                                <input type="checkbox" name="conformidad" required />
+                                Acepto la <a href="/privacidad.html">política de privacidad</a>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <button class="button is-primary" type="submit">Firmar</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+        </section>
+
+        <!-- Add JavaScript for form validation -->
+        <script>
+            const form = document.getElementById("firmar-form");
+            const dniInput = document.getElementsByName("dni")[0];
+
+            form.addEventListener("submit", (event) => {
+                // Check that all fields are present
+                const inputs = form.querySelectorAll("input, select");
+                let isValid = true;
+                inputs.forEach((input) => {
+                    if (!input.value) {
+                        isValid = false;
+                        input.classList.add("is-danger");
+                    } else {
+                        input.classList.remove("is-danger");
+                    }
+                });
+
+                // Check that DNI/NIE is valid
+                if (!validarDNI(dniInput.value)) {
+                    isValid = false;
+                    dniInput.classList.add("is-danger");
+                } else {
+                    dniInput.classList.remove("is-danger");
+                }
+
+                if (!isValid) {
+                    event.preventDefault();
+                }
+            });
+
+            function validarDNI(dni) {
+                // Implement DNI/NIE validation logic here
+                return true;
+            }
+        </script>
+    </body>
+</html>
