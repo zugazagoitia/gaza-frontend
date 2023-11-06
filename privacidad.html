@@ -1,30 +1,77 @@
-<!-- FILEPATH: /Users/zugazagoitia/Projects/gaza-frontend/privacidad.html -->
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <title>Privacy Policy</title>
+    <title>Petición de Gaza</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
     />
   </head>
   <body>
+    <nav
+      class="navbar is-primary"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a class="navbar-item" href="./index.html"> La petición </a>
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="./firmar.html"> Firmar petición </a>
+          <a class="navbar-item" href="./firmantes.html"> Ver firmantes </a>
+        </div>
+      </div>
+    </nav>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(
+          document.querySelectorAll(".navbar-burger"),
+          0
+        );
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+          // Add a click event on each of them
+          $navbarBurgers.forEach((el) => {
+            el.addEventListener("click", () => {
+              // Get the target from the "data-target" attribute
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
+
+              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+              el.classList.toggle("is-active");
+              $target.classList.toggle("is-active");
+            });
+          });
+        }
+      });
+    </script>
     <section class="section">
       <div class="container">
         <h1 class="title">Privacy Policy</h1>
         <div class="content">
           <p>
-            Cláusula informatíca sobre la protección de datos De acuerdo con lo
-            dispuesto en el Reglamento (UE) 2016/679 del Parlamento Europeo y
+            De acuerdo con lo dispuesto en el Reglamento (UE) 2016/679 del Parlamento Europeo y
             del Consejo, de 27 de abril de 2016, relativo a la protección de las
             personas físicas en lo que respecta al tratamiento de datos
             personales y a la libre circulación de estos datos, así como en la
             Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos
-            Personales y garantía de los derechos digitales, se le informa de
+            Personales y garantía de los derechos digitales, <b>se le informa de
             que sus datos personales sólo serán utilizados en el ámbito de
-            actividad de la Red interuniversitaria con Palestina y con el
+            actividad de la Red interuniversitaria con Palestina</b> y con el
             propósito de impulsar la campaña #NotMyUniversity/لا_جامعتي #. La
             Red Interuniversitaria con Palestina no comercializará en ningún
             caso con los datos personales recogidos a través de su página, así

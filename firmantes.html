@@ -1,39 +1,157 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Petición de Gaza</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridjs@1.2.0/dist/theme/mermaid.min.css" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gridjs/6.0.6/gridjs.production.min.js" integrity="sha512-wpiJjuL800CTEBA0QFs+RFw0tFtpXnQGea1p9S16WcYNXC1F3U0l1L7FQrDC3ihkYRtOj4Td7lKR3mYKxrwMMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    </head>
-    <body>
-        <section class="hero is-primary is-bold">
-            <div class="hero-body">
-                <div class="container">
-                    <h1 class="title">
-                        Petición de Gaza
-                    </h1>
-                    <h2 class="subtitle">
-                        Firme la petición para apoyar a Gaza
-                    </h2>
-                </div>
-            </div>
-        </section>
+  <head>
+    <title>Petición de Gaza</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/gridjs/6.0.6/theme/mermaid.min.css"
+      integrity="sha512-RDGsJLRkCwPeXuxmopxZ0srNhRpZf3CGGPsCNZRBJOwhbgrXAcJn12Ihu9FQaf2V/MI22oUNhyQ0bDH/J9p1gA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gridjs/6.0.6/gridjs.production.min.js"
+      integrity="sha512-wpiJjuL800CTEBA0QFs+RFw0tFtpXnQGea1p9S16WcYNXC1F3U0l1L7FQrDC3ihkYRtOj4Td7lKR3mYKxrwMMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+      #scroll-top-button {
+        display: inline-block;
+        background-color: #ff9800;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border-radius: 4px;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1000;
+      }
+      #scroll-top-button::after {
+        content: "\f077";
+        font-weight: normal;
+        font-style: normal;
+        font-size: 2em;
+        line-height: 50px;
+        color: #fff;
+      }
+      #scroll-top-button:hover {
+        cursor: pointer;
+        background-color: #333;
+      }
+      #scroll-top-button:active {
+        background-color: #555;
+      }
+      #scroll-top-button.show {
+        opacity: 1;
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var btn = Document.getElementById("scroll-top-button");
 
-        <section class="section">
-            <div class="container">
-                <div id="table-container"></div>
-            </div>
-        </section>
-        <script>
-            new gridjs.Grid({
-                columns: ['Nombre', 'Apellidos', 'Afiliación'],
-                data: [
-                    ['John', 'Doe', 'ACME Inc.'],
-                    ['Jane', 'Doe', 'ACME Inc.'],
-                    ['Bob', 'Smith', 'ACME Inc.'],
-                    ['Alice', 'Johnson', 'ACME Inc.']
-                ]
-            }).render(document.getElementById("table-container"));
-        </script>
-    </body>
+    window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 100) {
+            btn.classList.add("show");
+        } else {
+            btn.classList.remove("show");
+        }
+    });
+
+    btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    </script>
+    <!-- Back to top button -->
+    <a id="scroll-top-button"></a>
+    <nav
+      class="navbar is-primary"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a class="navbar-item" href="./index.html"> La petición </a>
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="./firmar.html"> Firmar petición </a>
+          <a class="navbar-item" href="./firmantes.html"> Ver firmantes </a>
+        </div>
+      </div>
+    </nav>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(
+          document.querySelectorAll(".navbar-burger"),
+          0
+        );
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+          // Add a click event on each of them
+          $navbarBurgers.forEach((el) => {
+            el.addEventListener("click", () => {
+              // Get the target from the "data-target" attribute
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
+
+              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+              el.classList.toggle("is-active");
+              $target.classList.toggle("is-active");
+            });
+          });
+        }
+      });
+    </script>
+    <section class="hero is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Petición de Gaza</h1>
+          <h2 class="subtitle">Firme la petición para apoyar a Gaza</h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div id="table-container"></div>
+      </div>
+    </section>
+    <script>
+      fetch("https://example.com/signatures")
+        .then(response => response.json())
+        .then(data => {
+          const grid = new gridjs.Grid({
+            columns: ["Nombre", "Apellidos", "Ocupación", "Afiliación"],
+            data: data.map(item => [item.name, item.surname, item.occupation, item.affiliation]),
+          });
+          grid.render(document.getElementById("table-container"));
+        })
+        .catch(error => console.error(error));
+    </script>
+
+  </body>
 </html>
