@@ -1,72 +1,72 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Petición de Gaza</title>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
-        />
-    </head>
-    <body>
-        <nav
-            class="navbar is-primary"
-            role="navigation"
-            aria-label="main navigation"
+<html lang="es">
+  <head>
+    <title>Campaña #NotMyUniversity/لا_جامعتي # de la Red Interuniversitaria con Palestina</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <nav
+      class="navbar is-success"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a class="navbar-item" href="./index.html"> Manifiesto </a>
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
         >
-            <div class="navbar-brand">
-                <a class="navbar-item" href="./index.html"> La petición </a>
-                <a
-                    role="button"
-                    class="navbar-burger"
-                    aria-label="menu"
-                    aria-expanded="false"
-                    data-target="navbarBasicExample"
-                >
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-start">
-                    <a class="navbar-item" href="./firmar.html"> Firmar petición </a>
-                    <a class="navbar-item" href="./firmantes.html"> Ver firmantes </a>
-                </div>
-            </div>
-        </nav>
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                // Get all "navbar-burger" elements
-                const $navbarBurgers = Array.prototype.slice.call(
-                    document.querySelectorAll(".navbar-burger"),
-                    0
-                );
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="./firmar.html"> Adhesión al manifiesto </a>
+          <a class="navbar-item" href="./firmantes.html"> Firmantes del manifiesto </a>
+        </div>
+      </div>
+    </nav>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(
+          document.querySelectorAll(".navbar-burger"),
+          0
+        );
 
-                // Check if there are any navbar burgers
-                if ($navbarBurgers.length > 0) {
-                    // Add a click event on each of them
-                    $navbarBurgers.forEach((el) => {
-                        el.addEventListener("click", () => {
-                            // Get the target from the "data-target" attribute
-                            const target = el.dataset.target;
-                            const $target = document.getElementById(target);
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+          // Add a click event on each of them
+          $navbarBurgers.forEach((el) => {
+            el.addEventListener("click", () => {
+              // Get the target from the "data-target" attribute
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
 
-                            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                            el.classList.toggle("is-active");
-                            $target.classList.toggle("is-active");
-                        });
-                    });
-                }
+              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+              el.classList.toggle("is-active");
+              $target.classList.toggle("is-active");
             });
-        </script>
-        <section class="hero is-primary is-bold">
-            <div class="hero-body">
-                <div class="container">
-                    <h1 class="title">Declaración sobre la situación en Gaza</h1>
-                    <h2 class="subtitle">Firme la petición para apoyar a Gaza</h2>
-                </div>
-            </div>
-        </section>
+          });
+        }
+      });
+    </script>
+    <section class="hero is-success">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Campaña #NotMyUniversity/لا_جامعتي # de la Red Interuniversitaria con Palestina</h1>
+          <h2 class="subtitle">Adhesión al manifiesto</h2>
+        </div>
+      </div>
+    </section>
         <section class="section">
             <div class="container">
                 <h1 class="title">Firma</h1>
@@ -109,8 +109,7 @@
                         <label class="label"
                             >DNI/NIE
                             <span class="has-text-grey-light"
-                                >(la información proporcionada en este campo no se hará
-                                pública)</span
+                                >(La información proporcionada en este campo no será pública, ver la política de privacidad)</span
                             >
                             <span class="has-text-danger">*</span></label
                         >
@@ -125,8 +124,7 @@
                         <label class="label"
                             >E-mail
                             <span class="has-text-grey-light"
-                                >(la información proporcionada en este campo no se hará
-                                pública)</span
+                                >(La información proporcionada en este campo no será pública, ver la política de privacidad)</span
                             >
                             <span class="has-text-danger">*</span></label
                         >
@@ -136,7 +134,7 @@
                     </div>
                     <div class="field">
                         <label class="label"
-                            >Ocupación <span class="has-text-danger">*</span></label
+                            >Colectivo <span class="has-text-danger">*</span></label
                         >
                         <div class="control">
                             <div class="select">
@@ -144,11 +142,12 @@
                                     <option value="" disabled selected>
                                         Seleccione una opción
                                     </option>
-                                    <option value="profesor">Profesor</option>
-                                    <option value="investigador">Investigador</option>
-                                    <option value="estudiante">Estudiante</option>
+                                    <option value="Profesor">Profesor</option>
+                                    <option value="Investigador">Investigador</option>
+                                    <option value="Estudiante">Estudiante</option>
                                     <option value="PAS">PAS</option>
-                                    <option value="otro">Otro</option>
+                                    <option value="Personal de servicios subcontratados">Personal de servicios subcontratados</option>
+                                    <option value="Otro">Otro</option>
                                 </select>
                             </div>
                         </div>
