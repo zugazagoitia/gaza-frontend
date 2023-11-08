@@ -71,7 +71,12 @@
             const urlParams = new URLSearchParams(window.location.search);
             const token = urlParams.get('token');
             if (token) {
-                fetch(`https://api.notmyuniversity.org/validate/${token}`)
+                fetch(`https://api.notmyuniversity.org/validate/${token}`,{
+                    method : 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
                     .then(response => response.json())
                     .then(data => {
                         const message = data.message;
