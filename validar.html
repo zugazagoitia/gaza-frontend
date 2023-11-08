@@ -67,30 +67,45 @@
         </div>
       </div>
     </section>
-        <script>
-            const urlParams = new URLSearchParams(window.location.search);
-            const token = urlParams.get('token');
-            if (token) {
-                fetch(`https://api.notmyuniversity.org/validate/${token}`,{
-                    method : 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                })
-                    .then(response => response.json())
-                    .then(data => {
-                        const message = data.message;
-                        const messageElement = document.createElement('p');
-                        messageElement.textContent = message;
-                        document.body.appendChild(messageElement);
+    <section class="section">
+        <div class="container">
+            <div class="card is-hidden" id="result-card">
+                <div class="card-content">
+                    <div class="content" id="result-message"></div>
+                </div>
+            </div>
+            <script>
+                const urlParams = new URLSearchParams(window.location.search);
+                const token = urlParams.get("token");
+                if (token) {
+                    fetch(`https://api.notmyuniversity.org/validate/${token}`, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
                     })
-                    .catch(
-                        error => {
-                            console.error(error)
-                            alert('Error al validar la firma')
-                        }
-                    );
-            }
-        </script>
+                        .then((response) => response.json())
+                        .then((data) => {
+                            const message = data.message;
+                            const messageElement = document.getElementById("result-message");
+                            messageElement.textContent = message;
+                            const resultCard = document.getElementById("result-card");
+                            resultCard.classList.remove("is-hidden");
+                        })
+                        .catch((error) => {
+                            console.error(error);
+                            const message = "Error al validar la firma: " + error.message;
+                            const messageElement = document.getElementById("result-message");
+                            messageElement.textContent = message;
+                            messageElement.classList.add("has-text-white"); // Add this line
+                            const resultCard = document.getElementById("result-card");
+                            resultCard.classList.remove("is-hidden");
+                            resultCard.classList.add("has-background-danger");
+                        });
+
+                }
+            </script>
+        </div>
+    </section>
     </body>
 </html>
