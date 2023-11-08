@@ -71,7 +71,7 @@
             const urlParams = new URLSearchParams(window.location.search);
             const token = urlParams.get('token');
             if (token) {
-                fetch(`https://localhost:8080/validate/${token}`)
+                fetch(`https://api.notmyuniversity.org/validate/${token}`)
                     .then(response => response.json())
                     .then(data => {
                         const message = data.message;
