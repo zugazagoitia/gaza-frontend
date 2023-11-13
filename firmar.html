@@ -239,6 +239,10 @@
         let isValid = true;
         inputs.forEach((input) => {
           if (!input.value) {
+            // Don't check for second surname
+            if (input.name === "apellido2") {
+              return;
+            }
             isValid = false;
             input.classList.add("is-danger");
           } else {
