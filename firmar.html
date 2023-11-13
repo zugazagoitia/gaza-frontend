@@ -228,7 +228,20 @@
           valide su firma.</span>
         </form>
       </div>
+      <div id="modal-firma" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <div class="box">
+            <p>La firma se ha enviado correctamente, gracias por su apoyo.</p>
+            <p>Para validarla siga las instrucciones del correo electrónico, si no lo encuentra compruebe la carpeta de spam.</p>
+            <p>En caso de que no pueda acceder a los enlaces del correo electrónico, puede validar su firma en la página <a href="./validar.html">Valida tu firma</a>, usando el código de validación que se le ha enviado.</p>
+          </div>
+        </div>
+    
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
     </section>
+
 
     <!-- Add JavaScript for form validation -->
     <script>
@@ -322,7 +335,8 @@
                 })
                   .then((response) => {
                     if (response.ok) {
-                      alert("Firma enviada correctamente");
+                      // Mostrar un mensaje de éxito
+                      openModal(document.getElementById("modal-firma"));
                     } else {
                       response.json().then((data) => {
                         alert(`Error al enviar la firma: ${data.message}`);
@@ -396,6 +410,39 @@
 
         return true;
       }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        // Functions to open and close a modal
+        function openModal($el) {
+          $el.classList.add('is-active');
+        }
+      
+        function closeModal($el) {
+          $el.classList.remove('is-active');
+        }
+      
+        function closeAllModals() {
+          (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+            closeModal($modal);
+          });
+        }
+      
+        // Add a click event on various child elements to close the parent modal
+        (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+          const $target = $close.closest('.modal');
+      
+          $close.addEventListener('click', () => {
+            closeModal($target);
+          });
+        });
+      
+        // Add a keyboard event to close all modals
+        document.addEventListener('keydown', (event) => {
+          if (event.code === 'Escape') {
+            closeAllModals();
+          }
+        });
+      });
     </script>
   </body>
 </html>
