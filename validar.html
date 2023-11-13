@@ -102,10 +102,8 @@
         const urlParams = new URLSearchParams(window.location.search);
         const token = urlParams.get("token");
 
-        function disableInput(){
-          const validateButton = document.getElementById(
-            "validate-button"
-          );
+        function disableInput() {
+          const validateButton = document.getElementById("validate-button");
           validateButton.classList.add("is-disabled");
           validateButton.disabled = true;
           const tokenInput = document.getElementById("token-input");
@@ -139,7 +137,8 @@
                   })
                   .catch((error) => {
                     console.error(error);
-                    const message = "Error al validar la firma: " + error.message;
+                    const message =
+                      "Error al validar la firma: " + error.message;
                     const messageElement =
                       document.getElementById("result-message");
                     messageElement.textContent = message;
@@ -148,7 +147,9 @@
                     resultCard.classList.remove("is-hidden");
                     resultCard.classList.add("has-background-danger");
                   });
-        });});
+              });
+          });
+        }
 
         if (token) {
           //Fill the input with the token
@@ -158,9 +159,7 @@
           validateToken(token);
         } else {
           //Offer to enter token manually
-          const validateButton = document.getElementById(
-            "validate-button"
-          );
+          const validateButton = document.getElementById("validate-button");
           validateButton.addEventListener("click", () => {
             const tokenInput = document.getElementById("token-input");
             const token = tokenInput.value;
