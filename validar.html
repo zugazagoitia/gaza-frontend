@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"
     />
+    <script src="https://www.google.com/recaptcha/api.js?render=6Ld3jAcpAAAAAOzkkkPys23rYGu50w9cXtFQg0uI"></script>
   </head>
   <body>
     <nav
@@ -78,92 +79,95 @@
       </div>
     </section>
     <section class="section">
-        <div class="container">
-          <div class="field">
-            <label class="label">Inserta tu código de validación:</label>
-            <div class="control">
-              <input
-                class="input"
-                type="text"
-                id="token-input"
-                placeholder="Token"
-              />
-            </div>
-          </div>
-          <button class="button is-success" id="validate-button">
-            Validar
-          </button>
-          <div class="card is-hidden py-3" id="result-card">
-            <div class="card-content">
-              <div class="content" id="result-message"></div>
-            </div>
+      <div class="container">
+        <div class="field">
+          <label class="label">Inserta tu código de validación:</label>
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              id="token-input"
+              placeholder="Token"
+            />
           </div>
         </div>
-        <script>
-          const urlParams = new URLSearchParams(window.location.search);
-          const token = urlParams.get("token");
-
-          function disableInput(){
-            const validateButton = document.getElementById(
-              "validate-button"
-            );
-            validateButton.classList.add("is-disabled");
-            validateButton.disabled = true;
-            const tokenInput = document.getElementById("token-input");
-            tokenInput.classList.add("is-disabled");
-            tokenInput.disabled = true;
-          }
-
-          function validateToken(token) {
-            fetch(`https://api.notmyuniversity.org/validate/${token}`, {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-            })
-              .then((response) => response.json())
-              .then((data) => {
-                const message = data.message;
-                const messageElement =
-                  document.getElementById("result-message");
-                messageElement.textContent = message;
-                const resultCard = document.getElementById("result-card");
-                resultCard.classList.remove("is-hidden");
-                disableInput();
-              })
-              .catch((error) => {
-                console.error(error);
-                const message = "Error al validar la firma: " + error.message;
-                const messageElement =
-                  document.getElementById("result-message");
-                messageElement.textContent = message;
-                messageElement.classList.add("has-text-white"); // Add this line
-                const resultCard = document.getElementById("result-card");
-                resultCard.classList.remove("is-hidden");
-                resultCard.classList.add("has-background-danger");
-              });
-          }
-
-          if (token) {
-            //Fill the input with the token
-            const tokenInput = document.getElementById("token-input");
-            tokenInput.value = token;
-            disableInput();
-            validateToken(token);
-          } else {
-            //Offer to enter token manually
-            const validateButton = document.getElementById(
-              "validate-button"
-            );
-            validateButton.addEventListener("click", () => {
-              const tokenInput = document.getElementById("token-input");
-              const token = tokenInput.value;
-              validateToken(token);
-            });
-          }
-        
-        </script>
+        <button class="button is-success" id="validate-button">Validar</button>
+        <div class="card is-hidden py-3" id="result-card">
+          <div class="card-content">
+            <div class="content" id="result-message"></div>
+          </div>
+        </div>
       </div>
+      <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const token = urlParams.get("token");
+
+        function disableInput(){
+          const validateButton = document.getElementById(
+            "validate-button"
+          );
+          validateButton.classList.add("is-disabled");
+          validateButton.disabled = true;
+          const tokenInput = document.getElementById("token-input");
+          tokenInput.classList.add("is-disabled");
+          tokenInput.disabled = true;
+        }
+
+        function validateToken(token) {
+          grecaptcha.ready(function () {
+            grecaptcha
+              .execute("6Ld3jAcpAAAAAOzkkkPys23rYGu50w9cXtFQg0uI", {
+                action: "submit",
+              })
+              .then(function (token) {
+                fetch(`https://api.notmyuniversity.org/validate/${token}`, {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                    "g-recaptcha-response": token,
+                  },
+                })
+                  .then((response) => response.json())
+                  .then((data) => {
+                    const message = data.message;
+                    const messageElement =
+                      document.getElementById("result-message");
+                    messageElement.textContent = message;
+                    const resultCard = document.getElementById("result-card");
+                    resultCard.classList.remove("is-hidden");
+                    disableInput();
+                  })
+                  .catch((error) => {
+                    console.error(error);
+                    const message = "Error al validar la firma: " + error.message;
+                    const messageElement =
+                      document.getElementById("result-message");
+                    messageElement.textContent = message;
+                    messageElement.classList.add("has-text-white"); // Add this line
+                    const resultCard = document.getElementById("result-card");
+                    resultCard.classList.remove("is-hidden");
+                    resultCard.classList.add("has-background-danger");
+                  });
+        });});
+
+        if (token) {
+          //Fill the input with the token
+          const tokenInput = document.getElementById("token-input");
+          tokenInput.value = token;
+          disableInput();
+          validateToken(token);
+        } else {
+          //Offer to enter token manually
+          const validateButton = document.getElementById(
+            "validate-button"
+          );
+          validateButton.addEventListener("click", () => {
+            const tokenInput = document.getElementById("token-input");
+            const token = tokenInput.value;
+            validateToken(token);
+          });
+        }
+      </script>
     </section>
   </body>
 </html>
