@@ -118,12 +118,12 @@
               .execute("6Ld3jAcpAAAAAOzkkkPys23rYGu50w9cXtFQg0uI", {
                 action: "submit",
               })
-              .then(function (token) {
+              .then(function (captchaToken) {
                 fetch(`https://api.notmyuniversity.org/validate/${token}`, {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json",
-                    "g-recaptcha-response": token,
+                    "g-recaptcha-response": captchaToken,
                   },
                 })
                   .then((response) => response.json())
