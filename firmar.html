@@ -336,7 +336,7 @@
                   .then((response) => {
                     if (response.ok) {
                       // Mostrar un mensaje de éxito
-                      openModal(document.getElementById("modal-firma"));
+                      document.getElementById("modal-firma").classList.add("is-active");
                     } else {
                       response.json().then((data) => {
                         alert(`Error al enviar la firma: ${data.message}`);
@@ -413,9 +413,6 @@
 
       document.addEventListener('DOMContentLoaded', () => {
         // Functions to open and close a modal
-        function openModal($el) {
-          $el.classList.add('is-active');
-        }
       
         function closeModal($el) {
           $el.classList.remove('is-active');
