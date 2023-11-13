@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>Campaña #NotMyUniversity/لا_جامعتي # de la Red Interuniversitaria con Palestina</title>
+    <title>
+      Campaña #NotMyUniversity/لا_جامعتي # de la Red Interuniversitaria con
+      Palestina
+    </title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"
     />
+    <script src="https://www.google.com/recaptcha/api.js?render=6Ld3jAcpAAAAAOzkkkPys23rYGu50w9cXtFQg0uI"></script>
   </head>
   <body>
     <nav
@@ -29,8 +33,12 @@
       </div>
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item" href="./firmar.html"> Adhesión al manifiesto </a>
-          <a class="navbar-item" href="./firmantes.html"> Firmantes del manifiesto </a>
+          <a class="navbar-item" href="./firmar.html">
+            Adhesión al manifiesto
+          </a>
+          <a class="navbar-item" href="./firmantes.html">
+            Firmantes del manifiesto
+          </a>
         </div>
       </div>
     </nav>
@@ -62,261 +70,325 @@
     <section class="hero is-success">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title">Campaña #NotMyUniversity/لا_جامعتي # de la Red Interuniversitaria con Palestina</h1>
+          <h1 class="title">
+            Campaña #NotMyUniversity/لا_جامعتي # de la Red Interuniversitaria
+            con Palestina
+          </h1>
           <h2 class="subtitle is-size-3">Adhesión al manifiesto</h2>
         </div>
       </div>
     </section>
-        <section class="section">
-            <div class="container">
-                <h1 class="title">Firma</h1>
-                <p class="has-text-danger my-4">
-                    Los campos marcados con asterisco
-                    <span class="has-text-danger">*</span> son obligatorios.
-                </p>
-                <form id="firmar-form" method="POST">
-                    <div class="field">
-                        <label class="label"
-                            >Nombre <span class="has-text-danger">*</span></label
-                        >
-                        <div class="control">
-                            <input class="input" type="text" name="nombre" required />
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label"
-                            >Primer apellido <span class="has-text-danger">*</span></label
-                        >
-                        <div class="control">
-                            <input class="input" type="text" name="apellido1" required />
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">Segundo apellido <span class="has-text-danger">*</span></label>
-                        <div class="control">
-                            <input class="input" type="text" name="apellido2" />
-                            <p class="help is-info">
-                                Si carece de segundo apellido déjelo en blanco.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label"
-                            >Afiliación <span class="has-text-danger">*</span></label
-                        >
-                        <div class="control">
-                            <input class="input" type="text" name="afiliacion" required />
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label"
-                            >DNI/NIE
-                            <span class="has-text-grey-light"
-                                >(La información proporcionada en este campo no será pública, ver la <a href="./privacidad.html" target="_blank" onclick="window.open('./privacidad.html', 'Privacy Policy', 'width=600,height=400'); return false;">
-                                    política de privacidad
-                                </a>)</span
-                            >
-                            <span class="has-text-danger">*</span></label
-                        >
-                        <div class="control">
-                            <input class="input" type="text" name="dni" required />
-                            <p class="help is-danger" id="dni-error" style="display: none">
-                                El DNI/NIE es inválido
-                            </p>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label"
-                            >E-mail
-                            <span class="has-text-grey-light"
-                                >(La información proporcionada en este campo no será pública, ver la 
-                                <a href="./privacidad.html" target="_blank" onclick="window.open('./privacidad.html', 'Privacy Policy', 'width=600,height=400'); return false;">
-                                    política de privacidad
-                                </a>)</span
-                            >
-                            <span class="has-text-danger">*</span></label
-                        >
-                        <div class="control">
-                            <input class="input" type="email" name="email" required />
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label"
-                            >Colectivo <span class="has-text-danger">*</span></label
-                        >
-                        <div class="control">
-                            <div class="select">
-                                <select name="ocupacion" required>
-                                    <option value="" disabled selected>
-                                        Seleccione una opción
-                                    </option>
-                                    <option value="Docente e Investigador/a">Docente e Investigador/a</option>
-                                    <option value="Investigador/a contratado/a">Investigador/a contratado/a</option>
-                                    <option value="Estudiante">Estudiante</option>
-                                    <option value="Personal de administración y servicios">Personal de administración y servicios</option>
-                                    <option value="Personal de servicios subcontratados">Personal de servicios subcontratados</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="control">
-                            <label class="checkbox">
-                                <input type="checkbox" name="aceptar-email" />
-                                Acepto recibir información sobre acciones posteriores.
-                            </label>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="control">
-                            <label class="checkbox">
-                                <input type="checkbox" name="conformidad" required />
-                                Acepto la
-                                <label class="label">
-                                    Acepto la
-                                    <a href="./privacidad.html" target="_blank" onclick="window.open('./privacidad.html', 'Privacy Policy', 'width=600,height=400'); return false;">
-                                        política de privacidad <span class="has-text-danger">*</span>
-                                    </a>
-                                </label>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="control">
-                            <button class="button is-primary" type="submit">Firmar</button>
-                        </div>
-                    </div>
-                </form>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Firma</h1>
+        <p class="has-text-danger my-4">
+          Los campos marcados con asterisco
+          <span class="has-text-danger">*</span> son obligatorios.
+        </p>
+        <form id="firmar-form" method="POST">
+          <div class="field">
+            <label class="label"
+              >Nombre <span class="has-text-danger">*</span></label
+            >
+            <div class="control">
+              <input class="input" type="text" name="nombre" required />
             </div>
-        </section>
+          </div>
+          <div class="field">
+            <label class="label"
+              >Primer apellido <span class="has-text-danger">*</span></label
+            >
+            <div class="control">
+              <input class="input" type="text" name="apellido1" required />
+            </div>
+          </div>
+          <div class="field">
+            <label class="label"
+              >Segundo apellido <span class="has-text-danger">*</span></label
+            >
+            <div class="control">
+              <input class="input" type="text" name="apellido2" />
+              <p class="help is-info">
+                Si carece de segundo apellido déjelo en blanco.
+              </p>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label"
+              >Afiliación <span class="has-text-danger">*</span></label
+            >
+            <div class="control">
+              <input class="input" type="text" name="afiliacion" required />
+            </div>
+          </div>
+          <div class="field">
+            <label class="label"
+              >DNI/NIE
+              <span class="has-text-grey-light"
+                >(La información proporcionada en este campo no será pública,
+                ver la
+                <a
+                  href="./privacidad.html"
+                  target="_blank"
+                  onclick="window.open('./privacidad.html', 'Privacy Policy', 'width=600,height=400'); return false;"
+                >
+                  política de privacidad </a
+                >)</span
+              >
+              <span class="has-text-danger">*</span></label
+            >
+            <div class="control">
+              <input class="input" type="text" name="dni" required />
+              <p class="help is-danger" id="dni-error" style="display: none">
+                El DNI/NIE es inválido
+              </p>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label"
+              >E-mail
+              <span class="has-text-grey-light"
+                >(La información proporcionada en este campo no será pública,
+                ver la
+                <a
+                  href="./privacidad.html"
+                  target="_blank"
+                  onclick="window.open('./privacidad.html', 'Privacy Policy', 'width=600,height=400'); return false;"
+                >
+                  política de privacidad </a
+                >)</span
+              >
+              <span class="has-text-danger">*</span></label
+            >
+            <div class="control">
+              <input class="input" type="email" name="email" required />
+            </div>
+          </div>
+          <div class="field">
+            <label class="label"
+              >Colectivo <span class="has-text-danger">*</span></label
+            >
+            <div class="control">
+              <div class="select">
+                <select name="ocupacion" required>
+                  <option value="" disabled selected>
+                    Seleccione una opción
+                  </option>
+                  <option value="Docente e Investigador/a">
+                    Docente e Investigador/a
+                  </option>
+                  <option value="Investigador/a contratado/a">
+                    Investigador/a contratado/a
+                  </option>
+                  <option value="Estudiante">Estudiante</option>
+                  <option value="Personal de administración y servicios">
+                    Personal de administración y servicios
+                  </option>
+                  <option value="Personal de servicios subcontratados">
+                    Personal de servicios subcontratados
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <label class="checkbox">
+                <input type="checkbox" name="aceptar-email" />
+                Acepto recibir información sobre acciones posteriores.
+              </label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <label class="checkbox">
+                <input type="checkbox" name="conformidad" required />
+                Acepto la
+                <label class="label">
+                  Acepto la
+                  <a
+                    href="./privacidad.html"
+                    target="_blank"
+                    onclick="window.open('./privacidad.html', 'Privacy Policy', 'width=600,height=400'); return false;"
+                  >
+                    política de privacidad
+                    <span class="has-text-danger">*</span>
+                  </a>
+                </label>
+              </label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <button class="button is-primary" type="submit">Firmar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
 
-        <!-- Add JavaScript for form validation -->
-        <script>
-            const form = document.getElementById("firmar-form");
-            const dniInput = document.getElementsByName("dni")[0];
-            const dniError = document.getElementById("dni-error");
+    <!-- Add JavaScript for form validation -->
+    <script>
+      const form = document.getElementById("firmar-form");
+      const dniInput = document.getElementsByName("dni")[0];
+      const dniError = document.getElementById("dni-error");
 
-            form.addEventListener("submit", (event) => {
-                // Check that all fields are present
-                const inputs = form.querySelectorAll("input, select");
-                let isValid = true;
-                inputs.forEach((input) => {
-                    if (!input.value) {
-                        isValid = false;
-                        input.classList.add("is-danger");
+      form.addEventListener("submit", (event) => {
+        // Check that all fields are present
+        const inputs = form.querySelectorAll("input, select");
+        let isValid = true;
+        inputs.forEach((input) => {
+          if (!input.value) {
+            isValid = false;
+            input.classList.add("is-danger");
+          } else {
+            input.classList.remove("is-danger");
+          }
+        });
+
+        // Check that DNI/NIE is valid
+        if (!validarDNI(dniInput.value)) {
+          isValid = false;
+          dniInput.classList.add("is-danger");
+          dniError.style.display = "block";
+        } else {
+          dniInput.classList.remove("is-danger");
+          dniError.style.display = "none";
+        }
+
+        if (!isValid) {
+          event.preventDefault();
+        } else {
+          event.preventDefault();
+
+          // Obtener los valores de los campos del formulario
+          const name = document.querySelector('input[name="nombre"]').value;
+          const surname1 = document.querySelector(
+            'input[name="apellido1"]'
+          ).value;
+          const surname2 = document.querySelector(
+            'input[name="apellido2"]'
+          ).value;
+          const email = document.querySelector('input[name="email"]').value;
+          const dni = document.querySelector('input[name="dni"]').value;
+          const affiliation = document.querySelector(
+            'input[name="afiliacion"]'
+          ).value;
+          const occupation = document.querySelector(
+            'select[name="ocupacion"]'
+          ).value;
+          const subscribedNewsletter = document.querySelector(
+            'input[name="aceptar-email"]'
+          ).checked;
+
+          const surname = surname2 ? `${surname1} ${surname2}` : surname1;
+          // Crear un objeto con los valores obtenidos
+          const data = {
+            name: name,
+            surname: surname,
+            email: email,
+            dni: dni,
+            affiliation: affiliation,
+            occupation: occupation,
+            subscribedNewsletter: subscribedNewsletter,
+          };
+
+          // Convertir el objeto a formato JSON
+          const jsonData = JSON.stringify(data);
+
+          grecaptcha.ready(function () {
+            grecaptcha
+              .execute("6Ld3jAcpAAAAAOzkkkPys23rYGu50w9cXtFQg0uI", {
+                action: "submit",
+              })
+              .then(function (token) {
+                // Enviar los datos al servidor con fetch
+                // Hacer un post sobre HTTPS a un dominio definido en una variable en la ruta /signatures
+                const url = "https://api.notmyuniversity.org/signatures";
+                fetch(url, {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                    "g-recaptcha-response": token,
+                  },
+                  body: jsonData,
+                })
+                  .then((response) => {
+                    if (response.ok) {
+                      alert("Firma enviada correctamente");
                     } else {
-                        input.classList.remove("is-danger");
+                      response.json().then((data) => {
+                        alert(`Error al enviar la firma: ${data.message}`);
+                      });
                     }
-                });
+                  })
+                  .catch((error) => {
+                    alert("Error al enviar la firma");
+                  });
+              });
+          });
+        }
+      });
 
-                // Check that DNI/NIE is valid
-                if (!validarDNI(dniInput.value)) {
-                    isValid = false;
-                    dniInput.classList.add("is-danger");
-                    dniError.style.display = "block";
-                } else {
-                    dniInput.classList.remove("is-danger");
-                    dniError.style.display = "none";
-                }
+      function validarDNI(dni) {
+        //Verificamos que el DNI tenga 9 caracteres
+        if (dni.length !== 9) {
+          return false;
+        }
+        //Comprobar si es un NIE mirando la primera letra
+        const firstLetter = dni.substr(0, 1).toUpperCase();
+        if (isNaN(firstLetter)) {
+          if (firstLetter === "X") {
+            dni = dni.replace("X", "0");
+          } else if (firstLetter === "Y") {
+            dni = dni.replace("Y", "1");
+          } else if (firstLetter === "Z") {
+            dni = dni.replace("Z", "2");
+          } else {
+            return false;
+          }
+        }
 
-                if (!isValid) {
-                    event.preventDefault();
-                } else {
-                    event.preventDefault();
+        //Comprobar si el resto del DNI es numérico
+        const numero = dni.substr(0, dni.length - 1);
+        if (isNaN(numero)) {
+          return false;
+        }
+        const letra = dni.substr(dni.length - 1, 1);
+        //Hacemos un array con las letras posibles
+        const letras = [
+          "T",
+          "R",
+          "W",
+          "A",
+          "G",
+          "M",
+          "Y",
+          "F",
+          "P",
+          "D",
+          "X",
+          "B",
+          "N",
+          "J",
+          "Z",
+          "S",
+          "Q",
+          "V",
+          "H",
+          "L",
+          "C",
+          "K",
+          "E",
+          "T",
+        ];
+        const letraCorrecta = letras[numero % 23];
+        if (letraCorrecta !== letra) {
+          return false;
+        }
 
-                    // Obtener los valores de los campos del formulario
-                    const name = document.querySelector('input[name="nombre"]').value;
-                    const surname1 = document.querySelector(
-                        'input[name="apellido1"]'
-                    ).value;
-                    const surname2 = document.querySelector(
-                        'input[name="apellido2"]'
-                    ).value;
-                    const email = document.querySelector('input[name="email"]').value;
-                    const dni = document.querySelector('input[name="dni"]').value;
-                    const affiliation = document.querySelector(
-                        'input[name="afiliacion"]'
-                    ).value;
-                    const occupation = document.querySelector(
-                        'select[name="ocupacion"]'
-                    ).value;
-                    const subscribedNewsletter = document.querySelector(
-                        'input[name="aceptar-email"]'
-                    ).checked;
-
-                    const surname = surname2 ? `${surname1} ${surname2}` : surname1;
-                    // Crear un objeto con los valores obtenidos
-                    const data = {
-                        name: name,
-                        surname: surname,
-                        email: email,
-                        dni: dni,
-                        affiliation: affiliation,
-                        occupation: occupation,
-                        subscribedNewsletter: subscribedNewsletter,
-                    };
-
-                    // Convertir el objeto a formato JSON
-                    const jsonData = JSON.stringify(data);
-
-                    // Enviar los datos al servidor con fetch
-                    // Hacer un post sobre HTTPS a un dominio definido en una variable en la ruta /signatures
-                        const url = "https://api.notmyuniversity.org/signatures";
-                        fetch(url, {
-                            method: "POST",
-                            headers: {
-                                "Content-Type": "application/json",
-                            },
-                            body: jsonData,
-                        })
-                            .then((response) => {
-                                if (response.ok) {
-                                    alert("Firma enviada correctamente");
-                                } else {
-                                    response.json().then((data) => {
-                                        alert(`Error al enviar la firma: ${data.message}`);
-                                    });
-                                }
-                            })
-                            .catch((error) => {
-                                alert("Error al enviar la firma");
-                            });
-                    }
-            });
-
-            function validarDNI(dni) {
-                //Verificamos que el DNI tenga 9 caracteres
-                if (dni.length !== 9) {
-                    return false;
-                }
-                //Comprobar si es un NIE mirando la primera letra
-                const firstLetter = dni.substr(0, 1).toUpperCase();
-                if (isNaN(firstLetter)) {
-                        if (firstLetter === "X"){
-                                dni = dni.replace("X", "0");
-                        } else if (firstLetter === "Y"){
-                                dni = dni.replace("Y", "1");
-                        } else if (firstLetter === "Z"){
-                                dni = dni.replace("Z", "2");
-                        } else {
-                                return false;
-                        }
-                }
-                
-                //Comprobar si el resto del DNI es numérico
-                const numero = dni.substr(0, dni.length - 1);
-                if (isNaN(numero)) {
-                    return false;
-                }
-                const letra = dni.substr(dni.length - 1, 1);
-                //Hacemos un array con las letras posibles
-                const letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
-                const letraCorrecta = letras[numero % 23];
-                if (letraCorrecta !== letra) {
-                    return false;
-                }
-
-                return true;
-            }
-        </script>
-    </body>
+        return true;
+      }
+    </script>
+  </body>
 </html>
