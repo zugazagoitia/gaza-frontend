@@ -41,7 +41,6 @@
           <a class="navbar-item" href="./firmantes.html">
             Firmantes del manifiesto
           </a>
-          <a class="navbar-item" href="./validar.html"> Valida tu firma </a>
         </div>
       </div>
     </nav>
@@ -228,14 +227,21 @@
           valide su firma.</span>
         </form>
       </div>
-      <div id="modal-firma" class="modal">
+      <div id="modal-firma" class="modal is-active">
         <div class="modal-background"></div>
         <div class="modal-content">
           <div class="box">
             <p>La firma se ha enviado correctamente, gracias por su apoyo.</p>
-            <p>Para validarla siga las instrucciones del correo electrónico, si no lo encuentra compruebe la carpeta de spam.</p>
-            <p>En caso de que no pueda acceder a los enlaces del correo electrónico, puede validar su firma en la página <a href="./validar.html">Valida tu firma</a>, usando el código de validación que se le ha enviado.</p>
-          </div>
+            <p class="mt-2">Para validarla siga las instrucciones del correo electrónico, si no lo encuentra compruebe la carpeta de spam.</p> 
+              <p class="mt-2">En caso de que no pueda acceder a los enlaces del correo electrónico, puede validar su firma usando el código recibido en la página:</p>
+              <div class="field mt-4">
+                <div class="control">
+                  <a href="./validar.html">
+                    <button class="button is-primary">Valida tu firma</button>
+                  </a>
+                </div>
+              </div>
+            </div>
         </div>
     
         <button class="modal-close is-large" aria-label="close"></button>
