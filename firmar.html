@@ -109,9 +109,9 @@
               >Segundo apellido <span class="has-text-danger">*</span></label
             >
             <div class="control">
-              <input class="input" type="text" name="apellido2" />
+              <input class="input" type="text" name="apellido2" required/>
               <p class="help is-info">
-                Si carece de segundo apellido déjelo en blanco.
+                Si carece de segundo apellido introduzca un espacio en blanco.
               </p>
             </div>
           </div>
@@ -258,10 +258,6 @@
         let isValid = true;
         inputs.forEach((input) => {
           if (!input.value) {
-            // Don't check for second surname
-            if (input.name === "apellido2") {
-              return;
-            }
             isValid = false;
             input.classList.add("is-danger");
           } else {
