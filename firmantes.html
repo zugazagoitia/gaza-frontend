@@ -24,42 +24,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <style>
-      #scroll-top-button {
-        display: inline-block;
-        background-color: #ff9800;
-        width: 50px;
-        height: 50px;
-        text-align: center;
-        border-radius: 4px;
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
-        opacity: 0;
-        visibility: hidden;
-        z-index: 1000;
-      }
-      #scroll-top-button::after {
-        content: "\f077";
-        font-weight: normal;
-        font-style: normal;
-        font-size: 2em;
-        line-height: 50px;
-        color: #fff;
-      }
-      #scroll-top-button:hover {
-        cursor: pointer;
-        background-color: #333;
-      }
-      #scroll-top-button:active {
-        background-color: #555;
-      }
-      #scroll-top-button.show {
-        opacity: 1;
-        visibility: visible;
-      }
-    </style>
   </head>
   <body>
     <nav
@@ -128,47 +92,106 @@
         </div>
       </div>
     </section>
+    <!-- Back to top button -->
+    <<div className="scroll-to-top">
+      <span class="btn btn-position btn-style">^</i>
+    </div>
+    <style>
+        .scroll-to-top {
+          position: relative;
+        }
+        
+        .btn-position {
+          position: fixed;
+          bottom: 40px;
+          right: 25px;
+          z-index: 20;
+        }
+        
+        .btn-style {
+          background-color: #551b54;
+          border: 2px solid #fff;
+          border-radius: 50%;
+          height: 50px;
+          width: 50px;
+          color: #fff;
+          cursor: pointer;
+          animation: movebtn 3s ease-in-out infinite;
+          transition: all 0.5s ease-in-out;
+          font-size: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          visibility: hidden;
+        }
+        .icon-style:hover {
+          animation: none;
+          background: #fff;
+          color: #551b54;
+          border: 2px solid #551b54;
+        }
+        
+        @keyframes movebtn {
+          0% {
+            transform: translateY(0px);
+          }
+          25% {
+            transform: translateY(20px);
+          }
+          50% {
+            transform: translateY(0px);
+          }
+          75% {
+            transform: translateY(-20px);
+          }
+          100% {
+            transform: translateY(0px);
+          }
+        }
+    </style>
 
     <script>
-      var btn = Document.getElementById("scroll-top-button");
-
-      window.addEventListener("scroll", function () {
-        if (window.pageYOffset > 100) {
-          btn.classList.add("show");
+      const scrollBtn = document.querySelector(".btn");
+      const btnVisibility = () => {
+        if (window.scrollY > 400) {
+            scrollBtn.style.visibility = "visible";
         } else {
-          btn.classList.remove("show");
+            scrollBtn.style.visibility = "hidden";
         }
-      });
-
-      btn.addEventListener("click", function (e) {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+      document.addEventListener("scroll", btnVisibility)
+      document.querySelector(".btn").addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       });
     </script>
-    <!-- Back to top button -->
-    <a id="scroll-top-button"></a>
-
     <section class="section">
       <div class="container">
         <div id="table-container"></div>
       </div>
     </section>
     <script>
-      fetch("https://api.notmyuniversity.org/signatures")
-        .then((response) => response.json())
-        .then((data) => {
-          const grid = new gridjs.Grid({
-            columns: ["Nombre", "Apellidos", "Colectivo", "Afiliación"],
-            data: data.map((item) => [
-              item.name,
-              item.surname,
-              item.occupation,
-              item.affiliation,
-            ]),
+        const grid = new gridjs.Grid({
+            columns: [{ name: "Nombre", }, { name: "Apellidos", width: '25%'}, { name: "Colectivo" }, { name: "Afiliación", width: '30%' }],
+            data: () => {
+              return fetch("https://api.notmyuniversity.org/signatures")
+                .then((response) => response.json())
+                .then((data) => data.map((item) => [
+                  item.name,
+                  item.surname,
+                  item.occupation,
+                  item.affiliation,
+                ]));
+            },
+            sort: true,
+            pagination: {
+              enabled: true,
+              limit: 50,
+            },
           });
           grid.render(document.getElementById("table-container"));
-        })
-        .catch((error) => console.error(error));
     </script>
   </body>
 </html>
