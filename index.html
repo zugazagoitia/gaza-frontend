@@ -160,10 +160,21 @@
             <a class="button is-primary is-large" href="./firmar.html"
               >Firmar la petición</a
             >
-            <a class="button is-link is-large" href="./firmantes.html"
+            <a id="boton-firmas" class="button is-link is-large" href="./firmantes.html"
               >Ver firmas</a
             >
           </div>
+          <script async>
+            document.addEventListener("DOMContentLoaded", () => {
+              const botonFirmas = document.getElementById("boton-firmas");
+              // Obtenemos el número de firmas de la API
+              fetch("https://api.notmyuniversity.org/signatureCount")
+                .then((response) => response.json())
+                .then((data) => {
+                  botonFirmas.innerHTML = `Ver las ${data.count} firmas`;
+                });
+            });
+          </script>
         </div>
       </div>
     </section>
