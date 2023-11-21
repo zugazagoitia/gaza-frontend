@@ -339,7 +339,10 @@
                   .then((response) => {
                     if (response.ok) {
                       // Mostrar un mensaje de éxito
-                      document.getElementById("modal-firma").classList.add("is-active");
+                      // document.getElementById("modal-firma").classList.add("is-active");
+
+                      // Redirigir a la página de validación
+                      window.location.href = "./validar.html";
                     } else {
                       response.json().then((data) => {
                         alert(`Error al enviar la firma: ${data.message}`);
