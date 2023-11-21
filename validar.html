@@ -41,9 +41,7 @@
           <a class="navbar-item" href="./firmantes.html">
             Firmantes del manifiesto
           </a>
-          <a class="navbar-item" href="./validar.html">
-            Validar firma
-          </a>
+          <a class="navbar-item" href="./validar.html"> Validar firma </a>
         </div>
       </div>
     </nav>
@@ -87,7 +85,10 @@
       <div class="container">
         <div class="notification is-info">
           <p>
-            Gracias por su apoyo. La firma se ha recibido correctamente. Para validarla introduzca el código de validación contenido en el correo electrónico que se le ha enviado. Si no encuentra este correo, compruebe su carpeta de spam/correo no deseado.
+            Gracias por su apoyo. La firma se ha recibido correctamente. Para
+            validarla introduzca el código de validación contenido en el correo
+            electrónico que se le ha enviado. Si no encuentra este correo,
+            compruebe su carpeta de spam/correo no deseado.
           </p>
         </div>
         <div class="field">
@@ -103,7 +104,7 @@
         </div>
         <button class="button is-success" id="validate-button">Validar</button>
         <div class="notification is-hidden my-3" id="result-card">
-            <div class="content" id="result-message"></div>
+          <div class="content" id="result-message"></div>
         </div>
       </div>
       <script>
@@ -133,7 +134,15 @@
                     "g-recaptcha-response": captchaToken,
                   },
                 })
-                  .then((response) => response.json())
+                  .then((response) => {
+                    // If the response is not 200, throw an error with the message received in the json
+                    if (!response.ok) {
+                      return response.json().then((data) => {
+                        throw new Error(data.message);
+                      });
+                    }
+                    return response.json();
+                  })
                   .then((data) => {
                     const message = data.message;
                     const messageElement =
