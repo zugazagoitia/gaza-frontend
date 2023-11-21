@@ -102,10 +102,8 @@
           </div>
         </div>
         <button class="button is-success" id="validate-button">Validar</button>
-        <div class="card is-hidden py-3" id="result-card">
-          <div class="card-content">
+        <div class="notification is-hidden my-3" id="result-card">
             <div class="content" id="result-message"></div>
-          </div>
         </div>
       </div>
       <script>
@@ -143,6 +141,7 @@
                     messageElement.textContent = message;
                     const resultCard = document.getElementById("result-card");
                     resultCard.classList.remove("is-hidden");
+                    resultCard.classList.add("is-success");
                     disableInput();
                   })
                   .catch((error) => {
@@ -155,7 +154,7 @@
                     messageElement.classList.add("has-text-white"); // Add this line
                     const resultCard = document.getElementById("result-card");
                     resultCard.classList.remove("is-hidden");
-                    resultCard.classList.add("has-background-danger");
+                    resultCard.classList.add("is-danger");
                   });
               });
           });
