@@ -94,110 +94,25 @@
             Campaña #NotMyUniversity/ليست_جامعتي # de la Red Interuniversitaria
             con Palestina
           </h1>
-          <h2 class="subtitle is-size-3">Firmantes del manifiesto</h2>
+          <h2 class="subtitle is-size-3">Día internacional de solidaridad con el pueblo palestino</h2>
         </div>
       </div>
     </section>
-    <!-- Back to top button -->
-    <div className="scroll-to-top">
-      <span class="btn btn-position btn-style">^</i>
-    </div>
-    <style>
-        .scroll-to-top {
-          position: relative;
-        }
-        
-        .btn-position {
-          position: fixed;
-          bottom: 40px;
-          right: 25px;
-          z-index: 20;
-        }
-        
-        .btn-style {
-          background-color: #551b54;
-          border: 2px solid #fff;
-          border-radius: 50%;
-          height: 50px;
-          width: 50px;
-          color: #fff;
-          cursor: pointer;
-          animation: movebtn 3s ease-in-out infinite;
-          transition: all 0.5s ease-in-out;
-          font-size: 40px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          visibility: hidden;
-        }
-        .icon-style:hover {
-          animation: none;
-          background: #fff;
-          color: #551b54;
-          border: 2px solid #551b54;
-        }
-        
-        @keyframes movebtn {
-          0% {
-            transform: translateY(0px);
-          }
-          25% {
-            transform: translateY(20px);
-          }
-          50% {
-            transform: translateY(0px);
-          }
-          75% {
-            transform: translateY(-20px);
-          }
-          100% {
-            transform: translateY(0px);
-          }
-        }
-    </style>
-
-    <script>
-      const scrollBtn = document.querySelector(".btn");
-      const btnVisibility = () => {
-        if (window.scrollY > 400) {
-            scrollBtn.style.visibility = "visible";
-        } else {
-            scrollBtn.style.visibility = "hidden";
-        }
-      };
-      document.addEventListener("scroll", btnVisibility)
-      document.querySelector(".btn").addEventListener("click", () => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      });
-    </script>
     <section class="section">
-      <div class="container">
-        <div id="table-container"></div>
-      </div>
-    </section>
-    <script>
-        const grid = new gridjs.Grid({
-            columns: [{ name: "Nombre", }, { name: "Apellidos", width: '25%'}, { name: "Colectivo" }, { name: "Afiliación", width: '30%' }],
-            data: () => {
-              return fetch("https://api.notmyuniversity.org/signatures")
-                .then((response) => response.json())
-                .then((data) => data.map((item) => [
-                  item.name,
-                  item.surname,
-                  item.occupation,
-                  item.affiliation,
-                ]));
-            },
-            sort: true,
-            pagination: {
-              enabled: true,
-              limit: 50,
-            },
-          });
-          grid.render(document.getElementById("table-container"));
-    </script>
+        <section class="section">
+            <style>
+                .actividad {
+                    width: 95%;
+                    height: 90vh;
+                    object-fit: contain;
+                }
+            </style>
+            <div style="display: flex; flex-wrap: wrap;">
+                <img src="./img/uja.jpeg" alt="Actividad UJA" class="actividad my-2" />
+                <img src="./img/uja.jpeg" alt="Actividad UJA" class="actividad my-2" />
+                <img src="./img/uja.jpeg" alt="Actividad UJA" class="actividad my-2" />
+                <!-- Add more images here -->
+            </div>
+        </section>
   </body>
 </html>
