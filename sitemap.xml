@@ -20,4 +20,66 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    <!--Add eu, ca and gl langs-->
+    <url>
+        <loc>https://notmyuniversity.org/gl/index.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://notmyuniversity.org/ca/index.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://notmyuniversity.org/eu/index.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://notmyuniversity.org/gl/firmar.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://notmyuniversity.org/ca/firmar.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://notmyuniversity.org/eu/firmar.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://notmyuniversity.org/gl/firmantes.html</loc>
+        <changefreq>always</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://notmyuniversity.org/ca/firmantes.html</loc>
+        <changefreq>always</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://notmyuniversity.org/eu/firmantes.html</loc>
+        <changefreq>always</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://notmyuniversity.org/gl/actividades.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://notmyuniversity.org/ca/actividades.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://notmyuniversity.org/eu/actividades.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>    
+
 </urlset>

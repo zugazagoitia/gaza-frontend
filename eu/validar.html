@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="eu">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="favicon.png" />
     <title>
-      Campaña #NotMyUniversity/ليست_جامعتي # de la Red Interuniversitaria con
-      Palestina
+      Unibertsitate arteko Sarearen #NotMyUniversity/ليست_جامعتي # kanpaina
+      Palestinarekin
     </title>
     <link
       rel="stylesheet"
@@ -20,7 +20,7 @@
       aria-label="main navigation"
     >
       <div class="navbar-brand">
-        <a class="navbar-item" href="/index.html"> Manifiesto </a>
+        <a class="navbar-item" href="/eu/index.html"> Adierazpena </a>
         <a
           role="button"
           class="navbar-burger"
@@ -35,21 +35,23 @@
       </div>
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item" href="/firmar.html">
-            Adhesión al manifiesto
+          <a class="navbar-item" href="/eu/firmar.html">
+            Adierazpenarekin atxikipena
           </a>
-          <a class="navbar-item" href="/firmantes.html">
-            Firmantes del manifiesto
+          <a class="navbar-item" href="/eu/firmantes.html">
+            Adierazpenaren sinatzaileak
           </a>
-          <a class="navbar-item" href="/actividades.html"> Actividades </a>
-          <a class="navbar-item" href="/validar.html"> Validar firma </a>
+          <a class="navbar-item" href="/eu/actividades.html"> Jarduerak </a>
+          <a class="navbar-item" href="/eu/validar.html">
+            Sinadura Baliozkotu
+          </a>
         </div>
         <div class="navbar-end">
-          <a class="navbar-item has-text-weight-bold" href="/index.html">
-            ES
-          </a>
+          <a class="navbar-item" href="/index.html"> ES </a>
           <a class="navbar-item" href="/gl/index.html"> GL </a>
-          <a class="navbar-item" href="/eu/index.html"> EU </a>
+          <a class="navbar-item has-text-weight-bold" href="/eu/index.html">
+            EU
+          </a>
           <a class="navbar-item" href="/ca/index.html"> CA </a>
         </div>
       </div>
@@ -83,10 +85,10 @@
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            Campaña #NotMyUniversity/ليست_جامعتي # de la Red Interuniversitaria
-            con Palestina
+            Unibertsitate arteko Sarearen #NotMyUniversity/ليست_جامعتي #
+            kanpaina Palestinarekin
           </h1>
-          <h2 class="subtitle">Validación de Firma</h2>
+          <h2 class="subtitle">Sinaduraren baliozkotzea</h2>
         </div>
       </div>
     </section>
@@ -94,24 +96,25 @@
       <div class="container">
         <div class="notification is-info">
           <p>
-            Gracias por su apoyo. La firma se ha recibido correctamente. Para
-            validarla introduzca el código de validación contenido en el correo
-            electrónico que se le ha enviado. Si no encuentra este correo,
-            compruebe su carpeta de spam/correo no deseado.
+            Sinadura ondo bidali da, eskerrik asko zure babesagatik.
+            Baliozkotzeko erabili emailera bidali den kodea, ez baduzu aurkitzen
+            begiratu spam karpetan.
           </p>
         </div>
         <div class="field">
-          <label class="label">Inserta tu código de validación:</label>
+          <label class="label">Idatzi zire baliozkotze kodea:</label>
           <div class="control">
             <input
               class="input"
               type="text"
               id="token-input"
-              placeholder="Código de validación..."
+              placeholder="Balioztatze-kodea..."
             />
           </div>
         </div>
-        <button class="button is-success" id="validate-button">Validar</button>
+        <button class="button is-success" id="validate-button">
+          Baliozkotu
+        </button>
         <div class="notification is-hidden my-3" id="result-card">
           <div class="content" id="result-message"></div>
         </div>
@@ -165,7 +168,7 @@
                   .catch((error) => {
                     console.error(error);
                     const message =
-                      "Error al validar la firma: " + error.message;
+                      "Akatsa sinadura baliozkotzean: " + error.message;
                     const messageElement =
                       document.getElementById("result-message");
                     messageElement.textContent = message;

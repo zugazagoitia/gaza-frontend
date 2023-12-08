@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="gl">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.png" />
+    <title>
+      Campaña #NotMyUniversity/ليست_جامعتي # da Rede Interuniversitaria con
+      Palestina
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/gridjs/6.0.6/theme/mermaid.min.css"
+      integrity="sha512-RDGsJLRkCwPeXuxmopxZ0srNhRpZf3CGGPsCNZRBJOwhbgrXAcJn12Ihu9FQaf2V/MI22oUNhyQ0bDH/J9p1gA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gridjs/6.0.6/gridjs.production.min.js"
+      integrity="sha512-wpiJjuL800CTEBA0QFs+RFw0tFtpXnQGea1p9S16WcYNXC1F3U0l1L7FQrDC3ihkYRtOj4Td7lKR3mYKxrwMMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <nav
+      class="navbar is-success"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/gl/index.html"> Manifesto </a>
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="/gl/firmar.html">
+            Adhesión ao manifesto
+          </a>
+          <a class="navbar-item" href="/gl/firmantes.html">
+            Asinantes do manifesto
+          </a>
+          <a class="navbar-item" href="/gl/actividades.html"> Actividades </a>
+          <a class="navbar-item" href="/gl/validar.html"> Validar firma </a>
+        </div>
+        <div class="navbar-end">
+          <a class="navbar-item" href="/index.html"> ES </a>
+          <a class="navbar-item has-text-weight-bold" href="/gl/index.html">
+            GL
+          </a>
+          <a class="navbar-item" href="/eu/index.html"> EU </a>
+          <a class="navbar-item" href="/ca/index.html"> CA </a>
+        </div>
+      </div>
+    </nav>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(
+          document.querySelectorAll(".navbar-burger"),
+          0
+        );
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+          // Add a click event on each of them
+          $navbarBurgers.forEach((el) => {
+            el.addEventListener("click", () => {
+              // Get the target from the "data-target" attribute
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
+
+              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+              el.classList.toggle("is-active");
+              $target.classList.toggle("is-active");
+            });
+          });
+        }
+      });
+    </script>
+    <section class="hero is-success">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Campaña #NotMyUniversity/ليست_جامعتي # da Rede Interuniversitaria
+            con Palestina
+          </h1>
+          <h2 class="subtitle is-size-3">
+            Día internacional de solidariedade co pobo palestino
+          </h2>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <style>
+        .actividad {
+          width: 95%;
+          height: 90vh;
+          object-fit: contain;
+        }
+      </style>
+      <div style="display: flex; flex-wrap: wrap">
+        <img src="/img/uja.jpeg" alt="Actividad UJA" class="actividad my-2" />
+        <img src="/img/uja.jpeg" alt="Actividad UJA" class="actividad my-2" />
+        <img src="/img/uja.jpeg" alt="Actividad UJA" class="actividad my-2" />
+        <!-- Add more images here -->
+      </div>
+    </section>
+  </body>
+</html>

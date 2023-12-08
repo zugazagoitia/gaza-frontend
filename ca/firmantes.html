@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="favicon.png" />
     <title>
-      Campaña #NotMyUniversity/ليست_جامعتي # de la Red Interuniversitaria con
+      Campanya #NotMyUniversity/ليست_جامعتي # de la Xarxa Interuniversitària amb
       Palestina
     </title>
     <link
@@ -32,7 +32,7 @@
       aria-label="main navigation"
     >
       <div class="navbar-brand">
-        <a class="navbar-item" href="/index.html"> Manifiesto </a>
+        <a class="navbar-item" href="/ca/index.html">Manifest </a>
         <a
           role="button"
           class="navbar-burger"
@@ -47,22 +47,22 @@
       </div>
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item" href="/firmar.html">
-            Adhesión al manifiesto
+          <a class="navbar-item" href="/ca/firmar.html">
+            Adhesió al manifest
           </a>
-          <a class="navbar-item" href="/firmantes.html">
-            Firmantes del manifiesto
+          <a class="navbar-item" href="/ca/firmantes.html">
+            Signants del manifest
           </a>
-          <a class="navbar-item" href="/actividades.html"> Actividades </a>
-          <a class="navbar-item" href="/validar.html"> Validar firma </a>
+          <a class="navbar-item" href="/ca/actividades.html"> Activitats </a>
+          <a class="navbar-item" href="/ca/validar.html"> Validar signatura </a>
         </div>
         <div class="navbar-end">
-          <a class="navbar-item has-text-weight-bold" href="/index.html">
-            ES
-          </a>
+          <a class="navbar-item" href="/index.html"> ES </a>
           <a class="navbar-item" href="/gl/index.html"> GL </a>
           <a class="navbar-item" href="/eu/index.html"> EU </a>
-          <a class="navbar-item" href="/ca/index.html"> CA </a>
+          <a class="navbar-item has-text-weight-bold" href="/ca/index.html">
+            CA
+          </a>
         </div>
       </div>
     </nav>
@@ -95,10 +95,10 @@
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            Campaña #NotMyUniversity/ليست_جامعتي # de la Red Interuniversitaria
-            con Palestina
+            Campanya #NotMyUniversity/ليست_جامعتي # de la xarxa
+            Interuniversitària amb Palestina
           </h1>
-          <h2 class="subtitle is-size-3">Firmantes del manifiesto</h2>
+          <h2 class="subtitle is-size-3">Signants del manifest</h2>
         </div>
       </div>
     </section>
@@ -185,10 +185,10 @@
     <script>
       const grid = new gridjs.Grid({
         columns: [
-          { name: "Nombre" },
-          { name: "Apellidos", width: "25%" },
-          { name: "Colectivo" },
-          { name: "Afiliación", width: "30%" },
+          { name: "Nom" },
+          { name: "Cognoms", width: "25%" },
+          { name: "Col·lectiu" },
+          { name: "Afiliació", width: "30%" },
         ],
         data: () => {
           return fetch("https://api.notmyuniversity.org/signatures")

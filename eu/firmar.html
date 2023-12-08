@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="eu">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="favicon.png" />
     <title>
-      Campaña #NotMyUniversity/ليست_جامعتي # de la Red Interuniversitaria con
-      Palestina
+      Unibertsitate arteko Sarearen #NotMyUniversity/ليست_جامعتي # kanpaina
+      Palestinarekin
     </title>
     <link
       rel="stylesheet"
@@ -20,7 +20,7 @@
       aria-label="main navigation"
     >
       <div class="navbar-brand">
-        <a class="navbar-item" href="/index.html"> Manifiesto </a>
+        <a class="navbar-item" href="/eu/index.html"> Adierazpena </a>
         <a
           role="button"
           class="navbar-burger"
@@ -35,21 +35,23 @@
       </div>
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item" href="/firmar.html">
-            Adhesión al manifiesto
+          <a class="navbar-item" href="/eu/firmar.html">
+            Sinadura Baliozkotu
           </a>
-          <a class="navbar-item" href="/firmantes.html">
-            Firmantes del manifiesto
+          <a class="navbar-item" href="/eu/firmantes.html">
+            Adierazpenaren sinatzaileak
           </a>
-          <a class="navbar-item" href="/actividades.html"> Actividades </a>
-          <a class="navbar-item" href="/validar.html"> Validar firma </a>
+          <a class="navbar-item" href="/eu/actividades.html"> Jarduerak </a>
+          <a class="navbar-item" href="/eu/validar.html">
+            Sinadura Baliozkotu
+          </a>
         </div>
         <div class="navbar-end">
-          <a class="navbar-item has-text-weight-bold" href="/index.html">
-            ES
-          </a>
+          <a class="navbar-item" href="/index.html"> ES </a>
           <a class="navbar-item" href="/gl/index.html"> GL </a>
-          <a class="navbar-item" href="/eu/index.html"> EU </a>
+          <a class="navbar-item has-text-weight-bold" href="/eu/index.html">
+            EU
+          </a>
           <a class="navbar-item" href="/ca/index.html"> CA </a>
         </div>
       </div>
@@ -83,24 +85,24 @@
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            Campaña #NotMyUniversity/ليست_جامعتي # de la Red Interuniversitaria
-            con Palestina
+            Unibertsitate arteko Sarearen #NotMyUniversity/ليست_جامعتي #
+            kanpaina Palestinarekin
           </h1>
-          <h2 class="subtitle is-size-3">Adhesión al manifiesto</h2>
+          <h2 class="subtitle is-size-3">Adierazpenarekin atxikipena</h2>
         </div>
       </div>
     </section>
     <section class="section">
       <div class="container">
-        <h1 class="title">Firma</h1>
+        <h1 class="title">Sinadura</h1>
         <p class="has-text-danger my-4">
-          Los campos marcados con asterisco
-          <span class="has-text-danger">*</span> son obligatorios.
+          <span class="has-text-danger">*</span>-z markatutako eremuak
+          derrigorrezkoak dira.
         </p>
         <form id="firmar-form" method="POST">
           <div class="field">
             <label class="label"
-              >Nombre <span class="has-text-danger">*</span></label
+              >Izena <span class="has-text-danger">*</span></label
             >
             <div class="control">
               <input class="input" type="text" name="nombre" required />
@@ -108,7 +110,7 @@
           </div>
           <div class="field">
             <label class="label"
-              >Primer apellido <span class="has-text-danger">*</span></label
+              >Lehen abizena <span class="has-text-danger">*</span></label
             >
             <div class="control">
               <input class="input" type="text" name="apellido1" required />
@@ -116,20 +118,20 @@
           </div>
           <div class="field">
             <label class="label"
-              >Segundo apellido <span class="has-text-danger">*</span></label
+              >Bigarren abizena <span class="has-text-danger">*</span></label
             >
             <div class="control">
               <input class="input" type="text" name="apellido2" required />
               <p class="help is-info">
-                Si carece de segundo apellido introduzca un espacio en blanco.
+                Bigarren abizenik ez baduzu utzi hutsune zuri bat.
               </p>
             </div>
           </div>
           <div class="field">
             <label class="label"
-              >Afiliación
+              >Afiliazioa
               <span class="has-text-grey-light"
-                >(Universidad, centro de investigación, etc.)</span
+                >(Unibertsitatea, Ikerketa-zentroa, etb.)</span
               >
               <span class="has-text-danger">*</span></label
             >
@@ -139,16 +141,16 @@
           </div>
           <div class="field">
             <label class="label"
-              >DNI/NIE
+              >NAN/AIZ
               <span class="has-text-grey-light"
-                >(La información proporcionada en este campo no será pública,
-                ver la
+                >(Eremu honetan jasotako informazioa ez da publikoa izango,
+                ikusi
                 <a
-                  href="/privacidad.html"
+                  href="/eu/privacidad.html"
                   target="_blank"
                   onclick="window.open('/privacidad.html', 'Privacy Policy', 'width=600,height=400'); return false;"
                 >
-                  política de privacidad </a
+                  pribatasun politika</a
                 >)</span
               >
               <span class="has-text-danger">*</span></label
@@ -156,22 +158,21 @@
             <div class="control">
               <input class="input" type="text" name="dni" required />
               <p class="help is-danger" id="dni-error" style="display: none">
-                El DNI/NIE es inválido
+                NAN/AIZ baliogabea
               </p>
             </div>
           </div>
           <div class="field">
             <label class="label"
-              >E-mail
-              <span class="has-text-grey-light"
-                >(La información proporcionada en este campo no será pública,
-                ver la
+              >Emaila
+              <span class="has-text-grey-light">
+                (Eremu honetan jasotako informazioa ez da publikoa izango, ikusi
                 <a
-                  href="/privacidad.html"
+                  href="/eu/privacidad.html"
                   target="_blank"
                   onclick="window.open('/privacidad.html', 'Privacy Policy', 'width=600,height=400'); return false;"
                 >
-                  política de privacidad </a
+                  pribatasun politika </a
                 >)</span
               >
               <span class="has-text-danger">*</span></label
@@ -182,26 +183,24 @@
           </div>
           <div class="field">
             <label class="label"
-              >Colectivo <span class="has-text-danger">*</span></label
+              >Kolektibo <span class="has-text-danger">*</span></label
             >
             <div class="control">
               <div class="select">
                 <select name="ocupacion" required>
-                  <option value="" disabled selected>
-                    Seleccione una opción
-                  </option>
+                  <option value="" disabled selected>Hautatu aukera bat</option>
                   <option value="Docente e Investigador/a">
-                    Docente e Investigador/a
+                    Irakasle eta ikertzailea
                   </option>
                   <option value="Investigador/a contratado/a">
-                    Investigador/a contratado/a
+                    Kontratatutako ikertzailea
                   </option>
-                  <option value="Estudiante">Estudiante</option>
+                  <option value="Estudiante">Ikaslea</option>
                   <option value="Personal de administración y servicios">
-                    Personal de administración y servicios
+                    Administrazio eta zerbitzuetako langileak
                   </option>
                   <option value="Personal de servicios subcontratados">
-                    Personal de servicios subcontratados
+                    Azpikontratatutako zerbitzuetako langileak
                   </option>
                 </select>
               </div>
@@ -211,7 +210,8 @@
             <div class="control">
               <label class="checkbox">
                 <input type="checkbox" name="aceptar-email" />
-                Acepto recibir información sobre acciones posteriores.
+                Etorkizuneko ekimenen inguruko informazioa jasotzea onartzen
+                dut.
               </label>
             </div>
           </div>
@@ -219,21 +219,22 @@
             <div class="control">
               <label class="checkbox">
                 <input type="checkbox" name="conformidad" required />
-                Acepto la
+
                 <a
-                  href="/privacidad.html"
+                  href="/eu/privacidad.html"
                   target="_blank"
                   onclick="window.open('/privacidad.html', 'Privacy Policy', 'width=600,height=400'); return false;"
                 >
-                  política de privacidad
-                  <span class="has-text-danger">*</span>
+                  Pribatasun politika
                 </a>
+                onartzen dut
+                <span class="has-text-danger">*</span>
               </label>
             </div>
           </div>
           <div class="field">
             <div class="control">
-              <button class="button is-primary" type="submit">Firmar</button>
+              <button class="button is-primary" type="submit">Sinatu</button>
             </div>
           </div>
         </form>
@@ -242,19 +243,23 @@
         <div class="modal-background"></div>
         <div class="modal-content">
           <div class="box">
-            <p>La firma se ha enviado correctamente, gracias por su apoyo.</p>
-            <p class="mt-2">
-              Para validarla use el código enviado por correo electrónico, si no
-              lo encuentra compruebe la carpeta de spam.
+            <p>
+              Sinadura behar bezala bidali da, eskerrik asko zure laguntzagatik.
             </p>
             <p class="mt-2">
-              Puede validar su firma usando el código recibido en la siguiente
-              página:
+              Baliozkotzeko, erabili posta elektronikoz bidalitako kodea,
+              aurkitzen ez baduzu begiratu zure spam karpeta.
+            </p>
+            <p class="mt-2">
+              Zure sinadura baliozkotu dezakezu hurrengo orrian jasotako kodea
+              erabiliz:
             </p>
             <div class="field mt-4">
               <div class="control">
-                <a href="/validar.html">
-                  <button class="button is-primary">Valida tu firma</button>
+                <a href="/eu/validar.html">
+                  <button class="button is-primary">
+                    Egiaztatu zure sinadura
+                  </button>
                 </a>
               </div>
             </div>
@@ -357,15 +362,15 @@
                       // document.getElementById("modal-firma").classList.add("is-active");
 
                       // Redirigir a la página de validación
-                      window.location.href = "/validar.html";
+                      window.location.href = "/eu/validar.html";
                     } else {
                       response.json().then((data) => {
-                        alert(`Error al enviar la firma: ${data.message}`);
+                        alert(`Akatsa sinadura bidaltzean: ${data.message}`);
                       });
                     }
                   })
                   .catch((error) => {
-                    alert("Error al enviar la firma");
+                    alert("Akatsa sinadura bidaltzean");
                   });
               });
           });

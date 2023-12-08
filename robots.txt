@@ -1,2 +1,5 @@
 User-agent: *
 Disallow: /firmantes.html
+Disallow: /gl/firmantes.html
+Disallow: /eu/firmantes.html
+Disallow: /ca/firmantes.html

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="favicon.png" />
     <title>
-      Campaña #NotMyUniversity/ليست_جامعتي # de la Red Interuniversitaria con
+      Campanya #NotMyUniversity/ليست_جامعتي # de la xarxa Interuniversitària amb
       Palestina
     </title>
     <link
@@ -20,7 +20,7 @@
       aria-label="main navigation"
     >
       <div class="navbar-brand">
-        <a class="navbar-item" href="/index.html"> Manifiesto </a>
+        <a class="navbar-item" href="/ca/index.html"> Manifest</a>
         <a
           role="button"
           class="navbar-burger"
@@ -35,22 +35,22 @@
       </div>
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item" href="/firmar.html">
-            Adhesión al manifiesto
+          <a class="navbar-item" href="/ca/firmar.html">
+            Adhesió al manifest
           </a>
-          <a class="navbar-item" href="/firmantes.html">
-            Firmantes del manifiesto
+          <a class="navbar-item" href="/ca/firmantes.html">
+            Signants del manifest
           </a>
-          <a class="navbar-item" href="/actividades.html"> Actividades </a>
-          <a class="navbar-item" href="/validar.html"> Validar firma </a>
+          <a class="navbar-item" href="/ca/actividades.html"> Activitats </a>
+          <a class="navbar-item" href="/ca/validar.html"> Validar signatura </a>
         </div>
         <div class="navbar-end">
-          <a class="navbar-item has-text-weight-bold" href="/index.html">
-            ES
-          </a>
+          <a class="navbar-item" href="/index.html"> ES </a>
           <a class="navbar-item" href="/gl/index.html"> GL </a>
           <a class="navbar-item" href="/eu/index.html"> EU </a>
-          <a class="navbar-item" href="/ca/index.html"> CA </a>
+          <a class="navbar-item has-text-weight-bold" href="/ca/index.html">
+            CA
+          </a>
         </div>
       </div>
     </nav>
@@ -83,10 +83,10 @@
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            Campaña #NotMyUniversity/ليست_جامعتي # de la Red Interuniversitaria
-            con Palestina
+            Campanya #NotMyUniversity/ليست_جامعتي # de la Xarxa
+            Interuniversitària amb Palestina
           </h1>
-          <h2 class="subtitle">Validación de Firma</h2>
+          <h2 class="subtitle">Validació de Signatura</h2>
         </div>
       </div>
     </section>
@@ -94,20 +94,19 @@
       <div class="container">
         <div class="notification is-info">
           <p>
-            Gracias por su apoyo. La firma se ha recibido correctamente. Para
-            validarla introduzca el código de validación contenido en el correo
-            electrónico que se le ha enviado. Si no encuentra este correo,
-            compruebe su carpeta de spam/correo no deseado.
+            La signatura s'ha enviat correctament; gràcies pel vostre suport.
+            Per a validar-la useu el codi enviat per correu electrònic; si no el
+            trobeu comproveu la carpeta de correu brossa.
           </p>
         </div>
         <div class="field">
-          <label class="label">Inserta tu código de validación:</label>
+          <label class="label">Inseriu el codi de validació:</label>
           <div class="control">
             <input
               class="input"
               type="text"
               id="token-input"
-              placeholder="Código de validación..."
+              placeholder="Codi de validació..."
             />
           </div>
         </div>
@@ -165,7 +164,7 @@
                   .catch((error) => {
                     console.error(error);
                     const message =
-                      "Error al validar la firma: " + error.message;
+                      "Error en validar la signatura: " + error.message;
                     const messageElement =
                       document.getElementById("result-message");
                     messageElement.textContent = message;

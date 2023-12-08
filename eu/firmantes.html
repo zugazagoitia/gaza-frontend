@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="eu">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="favicon.png" />
     <title>
-      Campaña #NotMyUniversity/ليست_جامعتي # de la Red Interuniversitaria con
-      Palestina
+      Unibertsitate arteko Sarearen #NotMyUniversity/ليست_جامعتي # kanpaina
+      Palestinarekin
     </title>
     <link
       rel="stylesheet"
@@ -32,7 +32,7 @@
       aria-label="main navigation"
     >
       <div class="navbar-brand">
-        <a class="navbar-item" href="/index.html"> Manifiesto </a>
+        <a class="navbar-item" href="/eu/index.html"> Adierazpena </a>
         <a
           role="button"
           class="navbar-burger"
@@ -47,21 +47,23 @@
       </div>
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item" href="/firmar.html">
-            Adhesión al manifiesto
+          <a class="navbar-item" href="/eu/firmar.html">
+            Adierazpenarekin atxikipena
           </a>
-          <a class="navbar-item" href="/firmantes.html">
-            Firmantes del manifiesto
+          <a class="navbar-item" href="/eu/firmantes.html">
+            Adierazpenaren sinatzaileak
           </a>
-          <a class="navbar-item" href="/actividades.html"> Actividades </a>
-          <a class="navbar-item" href="/validar.html"> Validar firma </a>
+          <a class="navbar-item" href="/eu/actividades.html"> Jarduerak </a>
+          <a class="navbar-item" href="/eu/validar.html">
+            Sinadura Baliozkotu
+          </a>
         </div>
         <div class="navbar-end">
-          <a class="navbar-item has-text-weight-bold" href="/index.html">
-            ES
-          </a>
+          <a class="navbar-item" href="/index.html"> ES </a>
           <a class="navbar-item" href="/gl/index.html"> GL </a>
-          <a class="navbar-item" href="/eu/index.html"> EU </a>
+          <a class="navbar-item has-text-weight-bold" href="/eu/index.html">
+            EU
+          </a>
           <a class="navbar-item" href="/ca/index.html"> CA </a>
         </div>
       </div>
@@ -95,10 +97,10 @@
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            Campaña #NotMyUniversity/ليست_جامعتي # de la Red Interuniversitaria
-            con Palestina
+            Unibertsitate arteko Sarearen #NotMyUniversity/ليست_جامعتي #
+            kanpaina Palestinarekin
           </h1>
-          <h2 class="subtitle is-size-3">Firmantes del manifiesto</h2>
+          <h2 class="subtitle is-size-3">Adierazpenaren sinatzaileak</h2>
         </div>
       </div>
     </section>
@@ -185,10 +187,10 @@
     <script>
       const grid = new gridjs.Grid({
         columns: [
-          { name: "Nombre" },
-          { name: "Apellidos", width: "25%" },
-          { name: "Colectivo" },
-          { name: "Afiliación", width: "30%" },
+          { name: "Izena" },
+          { name: "Abizenak", width: "25%" },
+          { name: "Kolektiboa" },
+          { name: "Afiliazioa", width: "30%" },
         ],
         data: () => {
           return fetch("https://api.notmyuniversity.org/signatures")

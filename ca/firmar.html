@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="favicon.png" />
     <title>
-      Campaña #NotMyUniversity/ليست_جامعتي # de la Red Interuniversitaria con
+      Campanya #NotMyUniversity/ليست_جامعتي # de la xarxa Interuniversitària amb
       Palestina
     </title>
     <link
@@ -20,7 +20,7 @@
       aria-label="main navigation"
     >
       <div class="navbar-brand">
-        <a class="navbar-item" href="/index.html"> Manifiesto </a>
+        <a class="navbar-item" href="/ca/index.html"> Manifest </a>
         <a
           role="button"
           class="navbar-burger"
@@ -35,22 +35,22 @@
       </div>
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item" href="/firmar.html">
-            Adhesión al manifiesto
+          <a class="navbar-item" href="/ca/firmar.html">
+            Adhesió al manifest
           </a>
-          <a class="navbar-item" href="/firmantes.html">
-            Firmantes del manifiesto
+          <a class="navbar-item" href="/ca/firmantes.html">
+            Signants del manifest
           </a>
-          <a class="navbar-item" href="/actividades.html"> Actividades </a>
-          <a class="navbar-item" href="/validar.html"> Validar firma </a>
+          <a class="navbar-item" href="/ca/actividades.html"> Activitats </a>
+          <a class="navbar-item" href="/ca/validar.html"> Validar signatura </a>
         </div>
         <div class="navbar-end">
-          <a class="navbar-item has-text-weight-bold" href="/index.html">
-            ES
-          </a>
+          <a class="navbar-item" href="/index.html"> ES </a>
           <a class="navbar-item" href="/gl/index.html"> GL </a>
           <a class="navbar-item" href="/eu/index.html"> EU </a>
-          <a class="navbar-item" href="/ca/index.html"> CA </a>
+          <a class="navbar-item has-text-weight-bold" href="/ca/index.html">
+            CA
+          </a>
         </div>
       </div>
     </nav>
@@ -83,24 +83,24 @@
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            Campaña #NotMyUniversity/ليست_جامعتي # de la Red Interuniversitaria
-            con Palestina
+            Campanya #NotMyUniversity/ليست_جامعتي # de la xarxa
+            Interuniversitària amb Palestina
           </h1>
-          <h2 class="subtitle is-size-3">Adhesión al manifiesto</h2>
+          <h2 class="subtitle is-size-3">Adhesió al manifest</h2>
         </div>
       </div>
     </section>
     <section class="section">
       <div class="container">
-        <h1 class="title">Firma</h1>
+        <h1 class="title">Signatura</h1>
         <p class="has-text-danger my-4">
-          Los campos marcados con asterisco
-          <span class="has-text-danger">*</span> son obligatorios.
+          Els camps marcats amb asterisc
+          <span class="has-text-danger">*</span> són obligatoris.
         </p>
         <form id="firmar-form" method="POST">
           <div class="field">
             <label class="label"
-              >Nombre <span class="has-text-danger">*</span></label
+              >Nom <span class="has-text-danger">*</span></label
             >
             <div class="control">
               <input class="input" type="text" name="nombre" required />
@@ -108,7 +108,7 @@
           </div>
           <div class="field">
             <label class="label"
-              >Primer apellido <span class="has-text-danger">*</span></label
+              >Primer cognom <span class="has-text-danger">*</span></label
             >
             <div class="control">
               <input class="input" type="text" name="apellido1" required />
@@ -116,21 +116,21 @@
           </div>
           <div class="field">
             <label class="label"
-              >Segundo apellido <span class="has-text-danger">*</span></label
+              >Segon cognom <span class="has-text-danger">*</span></label
             >
             <div class="control">
               <input class="input" type="text" name="apellido2" required />
               <p class="help is-info">
-                Si carece de segundo apellido introduzca un espacio en blanco.
+                Si no hi ha segon cognom introduïu un espai en blanc.
               </p>
             </div>
           </div>
           <div class="field">
             <label class="label"
-              >Afiliación
+              >Afiliació
               <span class="has-text-grey-light"
-                >(Universidad, centro de investigación, etc.)</span
-              >
+                >(Universitat, centre d'investigació, etc.)
+              </span>
               <span class="has-text-danger">*</span></label
             >
             <div class="control">
@@ -141,14 +141,14 @@
             <label class="label"
               >DNI/NIE
               <span class="has-text-grey-light"
-                >(La información proporcionada en este campo no será pública,
-                ver la
+                >(La informació proporcionada en aquest camp no serà pública:
+                vegeu la
                 <a
-                  href="/privacidad.html"
+                  href="/ca/privacidad.html"
                   target="_blank"
                   onclick="window.open('/privacidad.html', 'Privacy Policy', 'width=600,height=400'); return false;"
                 >
-                  política de privacidad </a
+                  política de privacitat </a
                 >)</span
               >
               <span class="has-text-danger">*</span></label
@@ -156,7 +156,7 @@
             <div class="control">
               <input class="input" type="text" name="dni" required />
               <p class="help is-danger" id="dni-error" style="display: none">
-                El DNI/NIE es inválido
+                El DNI/NIE és invàlid
               </p>
             </div>
           </div>
@@ -164,14 +164,14 @@
             <label class="label"
               >E-mail
               <span class="has-text-grey-light"
-                >(La información proporcionada en este campo no será pública,
-                ver la
+                >(La informació proporcionada en aquest camp no serà pública:
+                vegeu la
                 <a
-                  href="/privacidad.html"
+                  href="/ca/privacidad.html"
                   target="_blank"
                   onclick="window.open('/privacidad.html', 'Privacy Policy', 'width=600,height=400'); return false;"
                 >
-                  política de privacidad </a
+                  política de privacitat</a
                 >)</span
               >
               <span class="has-text-danger">*</span></label
@@ -182,26 +182,26 @@
           </div>
           <div class="field">
             <label class="label"
-              >Colectivo <span class="has-text-danger">*</span></label
+              >Col·lectiu <span class="has-text-danger">*</span></label
             >
             <div class="control">
               <div class="select">
                 <select name="ocupacion" required>
                   <option value="" disabled selected>
-                    Seleccione una opción
+                    Seleccioneu una opció
                   </option>
                   <option value="Docente e Investigador/a">
-                    Docente e Investigador/a
+                    Docent investigador/a
                   </option>
                   <option value="Investigador/a contratado/a">
-                    Investigador/a contratado/a
+                    Investigador/a contractat/da
                   </option>
-                  <option value="Estudiante">Estudiante</option>
-                  <option value="Personal de administración y servicios">
-                    Personal de administración y servicios
+                  <option value="Estudiante">Estudiant</option>
+                  <option value="Personal de administraciÃ³n y servicios">
+                    Personal d' administració i serveis
                   </option>
                   <option value="Personal de servicios subcontratados">
-                    Personal de servicios subcontratados
+                    Personal de serveis subcontractats
                   </option>
                 </select>
               </div>
@@ -211,7 +211,7 @@
             <div class="control">
               <label class="checkbox">
                 <input type="checkbox" name="aceptar-email" />
-                Acepto recibir información sobre acciones posteriores.
+                Accepto rebre informació sobre accions posteriors.
               </label>
             </div>
           </div>
@@ -219,13 +219,13 @@
             <div class="control">
               <label class="checkbox">
                 <input type="checkbox" name="conformidad" required />
-                Acepto la
+                Accepto la
                 <a
-                  href="/privacidad.html"
+                  href="/ca/privacidad.html"
                   target="_blank"
                   onclick="window.open('/privacidad.html', 'Privacy Policy', 'width=600,height=400'); return false;"
                 >
-                  política de privacidad
+                  política de privacitat
                   <span class="has-text-danger">*</span>
                 </a>
               </label>
@@ -233,7 +233,7 @@
           </div>
           <div class="field">
             <div class="control">
-              <button class="button is-primary" type="submit">Firmar</button>
+              <button class="button is-primary" type="submit">Signar</button>
             </div>
           </div>
         </form>
@@ -242,19 +242,23 @@
         <div class="modal-background"></div>
         <div class="modal-content">
           <div class="box">
-            <p>La firma se ha enviado correctamente, gracias por su apoyo.</p>
-            <p class="mt-2">
-              Para validarla use el código enviado por correo electrónico, si no
-              lo encuentra compruebe la carpeta de spam.
+            <p>
+              La signatura s'ha enviat correctament; gràcies pel vostre suport.
             </p>
             <p class="mt-2">
-              Puede validar su firma usando el código recibido en la siguiente
-              página:
+              Per a validar-la useu el codi enviat per correu electrònic; si no
+              el trobeu comproveu la carpeta de correu brossa.
+            </p>
+            <p class="mt-2">
+              Podeu validar la vostra signatura usant el codi rebut en la pàgina
+              següent:
             </p>
             <div class="field mt-4">
               <div class="control">
-                <a href="/validar.html">
-                  <button class="button is-primary">Valida tu firma</button>
+                <a href="/ca/validar.html">
+                  <button class="button is-primary">
+                    Valideu la signatura
+                  </button>
                 </a>
               </div>
             </div>
@@ -357,15 +361,15 @@
                       // document.getElementById("modal-firma").classList.add("is-active");
 
                       // Redirigir a la página de validación
-                      window.location.href = "/validar.html";
+                      window.location.href = "/ca/validar.html";
                     } else {
                       response.json().then((data) => {
-                        alert(`Error al enviar la firma: ${data.message}`);
+                        alert(`Error en enviar la signatura: ${data.message}`);
                       });
                     }
                   })
                   .catch((error) => {
-                    alert("Error al enviar la firma");
+                    alert("Error en enviar la signatura");
                   });
               });
           });
