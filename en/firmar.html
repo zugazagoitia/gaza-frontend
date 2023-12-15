@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="favicon.png" />
     <title>
-      Campaña #NotMyUniversity/ليست_جامعتي #<br> de la Red Interuniversitaria
-      Española de Solidaridad con Palestina
+      Spanish Inter-University Network of Solidarity with Palestine<br>
+      #NotMyUniversity/ليست_جامعتي # Campaign
     </title>
     <link
       rel="stylesheet"
@@ -20,7 +20,7 @@
       aria-label="main navigation"
     >
       <div class="navbar-brand">
-        <a class="navbar-item" href="/index.html"> Manifiesto </a>
+        <a class="navbar-item" href="./index.html"> Manifesto </a>
         <a
           role="button"
           class="navbar-burger"
@@ -35,21 +35,20 @@
       </div>
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item" href="/firmar.html">
-            Adhesión al manifiesto
+          <a class="navbar-item" href="./firmar.html"> Sign the petition </a>
+          <a class="navbar-item" href="./firmantes.html">
+            Current signatories
           </a>
-          <a class="navbar-item" href="/firmantes.html">
-            Firmantes del manifiesto
-          </a>
-          <a class="navbar-item" href="/validar.html"> Validar firma </a>
+          <a class="navbar-item" href="./actividades.html"> Activities </a>
+          <a class="navbar-item" href="./validar.html"> Validate signature </a>
         </div>
         <div class="navbar-end">
-          <a class="navbar-item has-text-weight-bold" href="/index.html">
-            ES
-          </a>
+          <a class="navbar-item" href="/index.html"> ES </a>
           <a class="navbar-item" href="/gl/index.html"> GL </a>
           <a class="navbar-item" href="/eu/index.html"> EU </a>
-          <a class="navbar-item" href="/en/index.html"> EN </a>
+          <a class="navbar-item has-text-weight-bold" href="/en/index.html">
+            EN
+          </a>
           <a class="navbar-item" href="/ca/index.html"> CA </a>
         </div>
       </div>
@@ -83,24 +82,24 @@
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            Campaña #NotMyUniversity/ليست_جامعتي #<br />
-            de la Red Interuniversitaria Española de Solidaridad con Palestina
+            Spanish Inter-University Network of Solidarity with Palestine<br />
+            #NotMyUniversity/ليست_جامعتي # Campaign
           </h1>
-          <h2 class="subtitle is-size-3">Adhesión al manifiesto</h2>
+          <h2 class="subtitle is-size-3">Sign the manifesto</h2>
         </div>
       </div>
     </section>
     <section class="section">
       <div class="container">
-        <h1 class="title">Firma</h1>
+        <h1 class="title">Signature data</h1>
         <p class="has-text-danger my-4">
-          Los campos marcados con asterisco
-          <span class="has-text-danger">*</span> son obligatorios.
+          Fields marked with an asterisk
+          <span class="has-text-danger">*</span> are obligatory
         </p>
         <form id="firmar-form" method="POST">
           <div class="field">
             <label class="label"
-              >Nombre <span class="has-text-danger">*</span></label
+              >Name <span class="has-text-danger">*</span></label
             >
             <div class="control">
               <input class="input" type="text" name="nombre" required />
@@ -108,7 +107,7 @@
           </div>
           <div class="field">
             <label class="label"
-              >Primer apellido <span class="has-text-danger">*</span></label
+              >Surname <span class="has-text-danger">*</span></label
             >
             <div class="control">
               <input class="input" type="text" name="apellido1" required />
@@ -116,20 +115,20 @@
           </div>
           <div class="field">
             <label class="label"
-              >Segundo apellido <span class="has-text-danger">*</span></label
+              >Second surname <span class="has-text-danger">*</span></label
             >
             <div class="control">
               <input class="input" type="text" name="apellido2" required />
               <p class="help is-info">
-                Si carece de segundo apellido introduzca un espacio en blanco.
+                If you do not have a second surname, please enter a blank space.
               </p>
             </div>
           </div>
           <div class="field">
             <label class="label"
-              >Afiliación
+              >Affiliation
               <span class="has-text-grey-light"
-                >(Universidad, centro de investigación, etc.)</span
+                >(Name of your university, reasearch centre, etc.)</span
               >
               <span class="has-text-danger">*</span></label
             >
@@ -141,14 +140,13 @@
             <label class="label"
               >DNI/NIE
               <span class="has-text-grey-light"
-                >(La información proporcionada en este campo no será pública,
-                ver la
+                >(The data provided in this field will not be made public, see
                 <a
-                  href="/privacidad.html"
+                  href="./privacidad.html"
                   target="_blank"
-                  onclick="window.open('/privacidad.html', 'Privacy Policy', 'width=600,height=400'); return false;"
+                  onclick="window.open('./privacidad.html', 'Privacy Policy', 'width=600,height=400'); return false;"
                 >
-                  política de privacidad </a
+                  Privacy policy </a
                 >)</span
               >
               <span class="has-text-danger">*</span></label
@@ -156,7 +154,7 @@
             <div class="control">
               <input class="input" type="text" name="dni" required />
               <p class="help is-danger" id="dni-error" style="display: none">
-                El DNI/NIE es inválido
+                DNI/NIE is invalid
               </p>
             </div>
           </div>
@@ -164,14 +162,13 @@
             <label class="label"
               >E-mail
               <span class="has-text-grey-light"
-                >(La información proporcionada en este campo no será pública,
-                ver la
+                >(The data provided in this field will not be made public, see
                 <a
-                  href="/privacidad.html"
+                  href="./privacidad.html"
                   target="_blank"
-                  onclick="window.open('/privacidad.html', 'Privacy Policy', 'width=600,height=400'); return false;"
+                  onclick="window.open('./privacidad.html', 'Privacy Policy', 'width=600,height=400'); return false;"
                 >
-                  política de privacidad </a
+                  Privacy policy </a
                 >)</span
               >
               <span class="has-text-danger">*</span></label
@@ -182,26 +179,26 @@
           </div>
           <div class="field">
             <label class="label"
-              >Colectivo <span class="has-text-danger">*</span></label
+              >Employee category<span class="has-text-danger">*</span></label
             >
             <div class="control">
               <div class="select">
                 <select name="ocupacion" required>
                   <option value="" disabled selected>
-                    Seleccione una opción
+                    Choose one of the following options
                   </option>
                   <option value="Docente e Investigador/a">
-                    Docente e Investigador/a
+                    Teaching/research staff
                   </option>
                   <option value="Investigador/a contratado/a">
-                    Investigador/a contratado/a
+                    Contract researcher
                   </option>
-                  <option value="Estudiante">Estudiante</option>
+                  <option value="Estudiante">Student</option>
                   <option value="Personal de administración y servicios">
-                    Personal de administración y servicios
+                    Administrative and service staff
                   </option>
                   <option value="Personal de servicios subcontratados">
-                    Personal de servicios subcontratados
+                    Subcontracted service staff
                   </option>
                 </select>
               </div>
@@ -211,7 +208,7 @@
             <div class="control">
               <label class="checkbox">
                 <input type="checkbox" name="aceptar-email" />
-                Acepto recibir información sobre acciones posteriores.
+                I would like to receive information about future actions.
               </label>
             </div>
           </div>
@@ -219,13 +216,13 @@
             <div class="control">
               <label class="checkbox">
                 <input type="checkbox" name="conformidad" required />
-                Acepto la
+                I accept the
                 <a
-                  href="/privacidad.html"
+                  href="./privacidad.html"
                   target="_blank"
-                  onclick="window.open('/privacidad.html', 'Privacy Policy', 'width=600,height=400'); return false;"
+                  onclick="window.open('./privacidad.html', 'Privacy Policy', 'width=600,height=400'); return false;"
                 >
-                  política de privacidad
+                  privacy policy
                   <span class="has-text-danger">*</span>
                 </a>
               </label>
@@ -233,7 +230,9 @@
           </div>
           <div class="field">
             <div class="control">
-              <button class="button is-primary" type="submit">Firmar</button>
+              <button class="button is-primary" type="submit">
+                Submit signature
+              </button>
             </div>
           </div>
         </form>
@@ -242,19 +241,23 @@
         <div class="modal-background"></div>
         <div class="modal-content">
           <div class="box">
-            <p>La firma se ha enviado correctamente, gracias por su apoyo.</p>
-            <p class="mt-2">
-              Para validarla use el código enviado por correo electrónico, si no
-              lo encuentra compruebe la carpeta de spam.
+            <p>
+              The signature has been sent correctly, thank-you for your support.
             </p>
             <p class="mt-2">
-              Puede validar su firma usando el código recibido en la siguiente
-              página:
+              To validate it, use the code sent by email; if you can't find it,
+              please check your spam folder.
+            </p>
+            <p class="mt-2">
+              You can validate your signature with the code received by e-mail
+              on the following page:
             </p>
             <div class="field mt-4">
               <div class="control">
-                <a href="/validar.html">
-                  <button class="button is-primary">Valida tu firma</button>
+                <a href="./validar.html">
+                  <button class="button is-primary">
+                    Validate your signature
+                  </button>
                 </a>
               </div>
             </div>
@@ -357,15 +360,17 @@
                       // document.getElementById("modal-firma").classList.add("is-active");
 
                       // Redirigir a la página de validación
-                      window.location.href = "/validar.html";
+                      window.location.href = "./validar.html";
                     } else {
                       response.json().then((data) => {
-                        alert(`Error al enviar la firma: ${data.message}`);
+                        alert(
+                          `An error occurred on sending the signature: ${data.message}`
+                        );
                       });
                     }
                   })
                   .catch((error) => {
-                    alert("Error al enviar la firma");
+                    alert("An error occurred on sending the signature");
                   });
               });
           });

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="favicon.png" />
     <title>
-      Campanya #NotMyUniversity/ليست_جامعتي #<br> de la Xarxa Interuniversitària
-      de Solidaritat amb Palestina
+      Spanish Inter-University Network of Solidarity with Palestine<br>
+      #NotMyUniversity/ليست_جامعتي # Campaign
     </title>
     <link
       rel="stylesheet"
@@ -20,7 +20,7 @@
       aria-label="main navigation"
     >
       <div class="navbar-brand">
-        <a class="navbar-item" href="/ca/index.html"> Manifest</a>
+        <a class="navbar-item" href="./index.html"> Manifesto </a>
         <a
           role="button"
           class="navbar-burger"
@@ -35,22 +35,21 @@
       </div>
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item" href="/ca/firmar.html">
-            Adhesió al manifest
+          <a class="navbar-item" href="./firmar.html"> Sign the petition </a>
+          <a class="navbar-item" href="./firmantes.html">
+            Current signatories
           </a>
-          <a class="navbar-item" href="/ca/firmantes.html">
-            Signants del manifest
-          </a>
-          <a class="navbar-item" href="/ca/validar.html"> Validar signatura </a>
+          <a class="navbar-item" href="./actividades.html"> Activities </a>
+          <a class="navbar-item" href="./validar.html"> Validate signature </a>
         </div>
         <div class="navbar-end">
           <a class="navbar-item" href="/index.html"> ES </a>
           <a class="navbar-item" href="/gl/index.html"> GL </a>
           <a class="navbar-item" href="/eu/index.html"> EU </a>
-          <a class="navbar-item" href="/en/index.html"> EN </a>
-          <a class="navbar-item has-text-weight-bold" href="/ca/index.html">
-            CA
+          <a class="navbar-item has-text-weight-bold" href="/en/index.html">
+            EN
           </a>
+          <a class="navbar-item" href="/ca/index.html"> CA </a>
         </div>
       </div>
     </nav>
@@ -83,10 +82,10 @@
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            Campanya #NotMyUniversity/ليست_جامعتي #<br />
-            de la Xarxa Interuniversitària de Solidaritat amb Palestina
+            Spanish Inter-University Network of Solidarity with Palestine<br />
+            #NotMyUniversity/ليست_جامعتي # Campaign
           </h1>
-          <h2 class="subtitle">Validació de Signatura</h2>
+          <h2 class="subtitle">Signature validation</h2>
         </div>
       </div>
     </section>
@@ -94,23 +93,24 @@
       <div class="container">
         <div class="notification is-info">
           <p>
-            La signatura s'ha enviat correctament; gràcies pel vostre suport.
-            Per a validar-la useu el codi enviat per correu electrònic; si no el
-            trobeu comproveu la carpeta de correu brossa.
+            Thank-you for your support. Your signature has been correctly
+            received. To validate it, introduce the validation code contained in
+            the e-mail message that has been sent to you. if you cannot find the
+            message, please check your spam directory.
           </p>
         </div>
         <div class="field">
-          <label class="label">Inseriu el codi de validació:</label>
+          <label class="label">Enter your validation code:</label>
           <div class="control">
             <input
               class="input"
               type="text"
               id="token-input"
-              placeholder="Codi de validació..."
+              placeholder="validation code..."
             />
           </div>
         </div>
-        <button class="button is-success" id="validate-button">Validar</button>
+        <button class="button is-success" id="validate-button">Validate</button>
         <div class="notification is-hidden my-3" id="result-card">
           <div class="content" id="result-message"></div>
         </div>
@@ -164,7 +164,8 @@
                   .catch((error) => {
                     console.error(error);
                     const message =
-                      "Error en validar la signatura: " + error.message;
+                      "An error occured on validating the signature: " +
+                      error.message;
                     const messageElement =
                       document.getElementById("result-message");
                     messageElement.textContent = message;
